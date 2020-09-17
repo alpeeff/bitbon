@@ -1,0 +1,117 @@
+.about {
+  &__menu {
+    @include font('Nova');
+    &-btn {
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      @include font(false, 12, #fff);
+      max-width: 116px;
+      border-radius: 22px 0 0 22px;
+      background-color: rgba(141, 102, 199, 0.7);
+      -webkit-backdrop-filter: blur(33px);
+      backdrop-filter: blur(33px);
+      position: fixed;
+      bottom: 100px;
+      right: 0;
+      z-index: 10;
+      padding: 10px 10px 10px 15px;
+      line-height: 1.16em;
+      &__title {
+        font-weight: 600;
+      }
+      @include min-w-h($widthDesktopSmall, $heightMedium) {
+        display: none;
+      }
+    }
+    &-wrapper {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background-color: hsla(0, 0%, 100%, 0.65);
+      z-index: 1000;
+      overflow-y: auto;
+      backdrop-filter: blur(33px);
+      -webkit-backdrop-filter: blur(33px);
+      padding: 55px 20px 25px;
+      transform-origin: center;
+      opacity: 0;
+      transform: scale(0);
+      pointer-events: none;
+      transition: all 0.22s ease-in;
+      border-radius: 50%;
+      &.active {
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: all;
+        border-radius: 0;
+      }
+      @include min-w-h($widthDesktopSmall, $heightMedium) {
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: all;
+        border-radius: 0;
+        padding: 30px 16px 30px 25px;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+        min-width: 200px;
+        opacity: 1;
+        left: 0;
+        top: auto;
+        bottom: auto;
+        right: auto;
+        transform: translateX(-50%);
+      }
+    }
+    &-close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      svg {
+        fill: #717171cc;
+      }
+      @include min-w-h($widthDesktopSmall, $heightMedium) {
+        display: none;
+      }
+    }
+    &-item {
+      @include font(false, 16);
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+      cursor: pointer;
+      &.active {
+        color: var(--active-icon-bright);
+      }
+      @include min-w-h($widthDesktopSmall, $heightMedium) {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &-list {
+      @include flex(center, center, column);
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      @include min-w-h($widthDesktopSmall, $heightMedium) {
+        align-items: flex-start;
+      }
+    }
+    &-title {
+      text-align: center;
+      @include font(false, 18, #717171cc, 700);
+      margin-bottom: 25px;
+      @include min-w-h($widthDesktopSmall, $heightMedium) {
+        display: none;
+      }
+    }
+  }
+}

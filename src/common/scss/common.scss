@@ -1,0 +1,177 @@
+:root {
+  --color-primary: #653e8a;
+  --color-black: #000;
+  --color-white: #c3c3c3;
+  --active-icon: #8577be;
+  --active-icon-bright: #7c48d0;
+  --color-grey: #939393;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Proxima Nova';
+  font-weight: 400;
+  color: #333;
+  overflow-x: hidden;
+  &.body--about {
+    background: #f7f7f7;
+  }
+  &.block-scroll {
+    overflow: hidden;
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+// Containers
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  &--header {
+    padding: 0 19px;
+    @include min-w($widthDesktopSmall) {
+      max-width: 1150px;
+      padding: 0;
+    }
+  }
+  &--footer {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    @include min-w($widthTabletMedium) {
+      @include flex(space-between, center);
+    }
+  }
+  &__about {
+    &--header {
+      @include flex(flex-start, center, column);
+      padding: 0 15px;
+      max-width: 800px;
+    }
+  }
+}
+
+.wrapper {
+  padding-top: 120px;
+  position: relative;
+}
+
+.video {
+  margin-bottom: 35px;
+  margin-top: 45px;
+}
+
+// Кнопки
+$borderRadius: 20px;
+.btn {
+  @include font('Roboto');
+  display: block;
+  text-align: center;
+  padding: 20px 25px;
+  border-radius: $borderRadius;
+  text-decoration: none;
+  &.btn--primary {
+    color: #fff;
+    font-size: 20px;
+    background-color: #607dcf;
+    background-image: linear-gradient(90deg, #565dd6 0, #8147c1);
+    max-width: 270px;
+    padding: 25px 70px;
+    position: relative;
+    span {
+      position: relative;
+      z-index: 4;
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      background: linear-gradient(90deg, #3c86f5, #a347e8);
+      transition: all 0.7s ease 0s;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      opacity: 0;
+      border-radius: $borderRadius;
+      pointer-events: none;
+    }
+    @include min-w($widthTabletLarge) {
+      padding: 20px 50px;
+      font-size: 18px;
+      border-radius: 15px;
+    }
+  }
+}
+
+// Типография
+.caption {
+  @include font('Nova', 14, #848484);
+  font-style: italic;
+  text-align: center;
+  margin-top: 15px;
+}
+
+// Списки
+.about__text {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    li {
+      position: relative;
+      padding-left: 25px;
+      @include font('Nova', 18);
+      line-height: 1.8;
+      &:not(:last-child) {
+        margin-bottom: 14px;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 13px;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #856fd0;
+      }
+      @include min-w($widthDesktopSmall) {
+        &:not(:last-child) {
+          margin-bottom: 14px;
+        }
+        font-size: 20px;
+        line-height: 2;
+        &::before {
+          top: 17px;
+        }
+      }
+    }
+  }
+}
+
+// Ленивая загрузка
+
+.lazy {
+  transition: all ease 0.3s;
+  background-color: rgb(189, 189, 189);
+}

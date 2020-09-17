@@ -1,0 +1,54 @@
+{
+  "name": "bitbon_remake",
+  "version": "1.0.0",
+  "description": "remake of bitbon.today",
+  "private": true,
+  "browserslist": "> 0.25%, not dead",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development npx webpack --mode development",
+    "build": "cross-env NODE_ENV=production npx webpack --mode production",
+    "start": "cross-env NODE_ENV=development npx webpack-dev-server --mode development --open"
+  },
+  "keywords": [
+    "bitbon",
+    "bitbon.today",
+    "news",
+    "bitbon"
+  ],
+  "author": "Bitbon team <roman.alpeeff@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.1.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^4.3.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.4.1",
+    "mini-css-extract-plugin": "^0.11.1",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^4.0.0",
+    "pug": "^3.0.0",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "svg-sprite-loader": "^5.0.0",
+    "svgo-loader": "^2.2.1",
+    "terser-webpack-plugin": "^4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.11.5",
+    "aos": "^2.3.4",
+    "gsap": "^3.5.1",
+    "normalize.css": "^8.0.1",
+    "swiper": "^6.2.0",
+    "tippy.js": "^6.2.6",
+    "vanilla-lazyload": "^17.1.2"
+  }
+}

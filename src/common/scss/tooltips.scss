@@ -1,0 +1,31 @@
+.tooltip {
+  cursor: pointer;
+  @include font(false, 12, #6945e2, 700);
+  margin-left: 3px;
+  letter-spacing: 2.4px;
+}
+
+// white theme
+$white: #fff;
+$whiteColor: #595959;
+.tippy-box[data-theme~='white'] {
+  background-color: $white;
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.22);
+  @include font('Roboto', 15, $whiteColor);
+  border-radius: 15px;
+  padding: 15px 20px;
+}
+.tippy-box[data-theme~='white'][data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: $white;
+}
+.tippy-box[data-theme~='white'][data-placement^='bottom']
+  > .tippy-arrow::before {
+  border-bottom-color: $white;
+}
+.tippy-box[data-theme~='white'][data-placement^='left'] > .tippy-arrow::before {
+  border-left-color: $white;
+}
+.tippy-box[data-theme~='white'][data-placement^='right']
+  > .tippy-arrow::before {
+  border-right-color: $white;
+}

@@ -1,0 +1,220 @@
+// Logo
+.logo {
+  text-transform: uppercase;
+  text-decoration: none;
+  @include flex();
+  @include font('Nova');
+  &--footer {
+    @include flex(center, center, column);
+    margin-bottom: 25px;
+    .logo__top {
+      color: #fff;
+    }
+    .logo__bottom {
+      color: #c5a6e2;
+    }
+    .logo__name {
+      margin-right: 0;
+      &::before {
+        display: none;
+      }
+    }
+    @include min-w($widthTabletMedium) {
+      align-items: flex-start;
+    }
+    @include min-w($widthTabletLarge) {
+      display: inline-block;
+    }
+  }
+  &__top {
+    @include font(false, 15, #000, 700);
+  }
+  &__bottom {
+    @include font(false, 17, #653e8a, 700);
+    letter-spacing: 0.7px;
+    line-height: 0.8;
+  }
+  &__name {
+    margin-right: 20px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      background: #9e92a9;
+      width: 1px;
+      height: 25px;
+      top: 52%;
+      right: -10px;
+      transform: translateY(-50%);
+    }
+  }
+  &__desc {
+    text-transform: initial;
+    max-width: 170px;
+    @include font('Roboto', 10, #929292, 400, 1.27);
+
+    @include min-w($widthDesktopSmall) {
+      font-size: 11px;
+      max-width: 220px;
+    }
+  }
+}
+
+// Nav
+.nav {
+  &.white {
+    .nav__item {
+      // Активный пункт меню при зафексированном сверху меню
+      &.active {
+        &:hover {
+          &::before {
+            width: 100%;
+          }
+        }
+        &::before {
+          background-color: rgba(255, 255, 255, 0.3);
+          height: 2px;
+        }
+        .nav__link {
+          color: var(--color-white);
+        }
+      }
+      // Меню зафексировано сверху
+      &::after {
+        background-color: var(--color-white);
+      }
+      &::before {
+        background-color: var(--color-white);
+        height: 1px;
+      }
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+    // Цвет иконки поиска, когда меню зафексировано
+    .nav__item--search svg {
+      stroke: #c3c3c3;
+    }
+    // Цвет ссылки, когда меню зафексировано
+    .nav__link {
+      color: var(--color-white);
+      font-size: 14px;
+    }
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include flex();
+  }
+  &__link {
+    text-decoration: none;
+    color: var(--color-black);
+  }
+  &__item {
+    display: none;
+    @include font('Nova', 17, var(--color-black), 400);
+    &.active {
+      &::before {
+        width: 100%;
+        background-color: var(--active-icon-bright);
+      }
+      .nav__link {
+        color: var(--active-icon-bright);
+      }
+    }
+    @include min-w($widthDesktopSmall) {
+      display: block;
+      position: relative;
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        transition: width 0.22s ease-in-out;
+        background-color: var(--color-black);
+        transform: translateX(-50%);
+      }
+      &:not(:last-child) {
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: -23px;
+          width: 4px;
+          height: 4px;
+          background-color: var(--color-black);
+          opacity: 0.4;
+          border-radius: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      &:hover {
+        &::before {
+          width: 50%;
+        }
+      }
+    }
+    &--search {
+      display: block;
+      svg {
+        stroke: #000;
+        fill: none;
+        stroke-width: 2px;
+        @include min-w($widthMobileLarge) {
+          width: 20px;
+          height: 20px;
+        }
+        @include min-w($widthDesktopSmall) {
+          width: 11px;
+          height: 11px;
+        }
+      }
+    }
+  }
+}
+
+// Header
+.header {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  &.fixed {
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.77);
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    z-index: 200;
+    & .header__inner {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .logo {
+      &__top {
+        color: #dedede;
+      }
+      &__bottom {
+        color: #c5a6e2;
+      }
+      &__name {
+        color: #929292;
+      }
+    }
+  }
+  @include min-w($widthDesktopSmall) {
+    margin-top: 0;
+  }
+  &__inner {
+    @include flex(space-between, center);
+    @include min-w($widthDesktopSmall) {
+      padding-top: 25px;
+    }
+  }
+}

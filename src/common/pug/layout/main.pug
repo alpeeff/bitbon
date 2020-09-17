@@ -1,0 +1,11 @@
+include ../mixins/mixins.pug
+doctype html
+html(lang="en")
+  include ../includes/head.pug
+  block state
+  body(class=page)
+    .wrapper
+      include ../../../components/header/header.pug
+      block content
+      include ../../../components/footer/footer.pug
+          

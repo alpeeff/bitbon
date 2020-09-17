@@ -1,0 +1,24 @@
+header.header
+  .container.container--header
+    .header__inner
+      a.logo(href="/")
+        .logo__name
+          .logo__top Bitbon.
+          .logo__bottom Today
+        .logo__desc Новости цифрового актива Bitbon и регулирования криптовалют
+      nav.nav
+        ul.nav__list
+          li.nav__item.active
+            a(href="/news.html").nav__link Новости
+          li.nav__item 
+            a(href="/articles.html").nav__link Статьи
+          li.nav__item 
+            a(href="/about.html").nav__link Суть проекта
+          li.nav__item 
+            a(href="/mining.html").nav__link Майнинг
+          li.nav__item 
+            a(href="/termins.html").nav__link Термины
+          li.nav__item.nav__item--search
+            a(href="/search.html")
+              +svg('search', 16, 16)
+      include ../mobile-menu/mobile-menu.pug

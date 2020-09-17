@@ -1,0 +1,41 @@
+.mobile-menu
+  ul.mobile-menu__list
+    li.mobile-menu__item
+      a(href="/news.html").mobile-menu__link
+        .mobile-menu__icon 
+          +svg('news-mobile', 20, 20)
+        .mobile-menu__text Новости
+    li.mobile-menu__item
+      a(href="/articles.html").mobile-menu__link
+        .mobile-menu__icon 
+          +svg('articles-mobile', 20, 20)
+        .mobile-menu__icon 
+        .mobile-menu__text Статьи
+    li.mobile-menu__item.active
+      a(href="/news.html").mobile-menu__link
+        .mobile-menu__icon 
+          +svg('logo', 25, 20)
+        .mobile-menu__text Суть проекта
+    li.mobile-menu__item 
+      a(href="/news.html").mobile-menu__link
+        .mobile-menu__icon 
+          +svg('mining-mobile', 20, 20)
+        .mobile-menu__text Майнинг
+    li.mobile-menu__item.mobile-menu__item--state
+      a(href="#").mobile-menu__link
+        .mobile-menu__icon 
+          +svg('more-mobile', 20, 20)
+        .mobile-menu__text Еще
+      .mobile-menu__social
+        .mobile-menu__heading Наши соц.сети
+        .mobile-menu__social__list
+          a(href="#").mobile-menu__social__icon
+            +svg('telegram', 20, 20)
+          a(href="#").mobile-menu__social__icon
+            +svg('instagram', 20, 20)
+          a(href="#").mobile-menu__social__icon
+            +svg('twitter', 20, 20)
+          a(href="#").mobile-menu__social__icon
+            +svg('facebook', 20, 20)
+          a(href="#").mobile-menu__social__icon
+            +svg('vk', 20, 20)

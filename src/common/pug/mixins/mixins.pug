@@ -1,0 +1,6 @@
+mixin image(source)
+  img(data-src=`./assets/${source}` class="lazy")&attributes(attributes)
+
+mixin svg(icon, w, h)
+  svg(width=w, height=h)&attributes(attributes)
+    use(xlink:href="./assets/sprite.svg#"+icon)

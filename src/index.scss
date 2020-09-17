@@ -1,0 +1,26 @@
+// Libs
+@import 'aos/dist/aos.css';
+@import 'tippy.js/dist/tippy.css';
+@import 'swiper/swiper.scss';
+
+// Normalize
+@import '~normalize.css';
+
+// Fonts
+@import './common/scss/fonts.scss';
+
+// Mixins
+@import './common/scss/mixins.scss';
+
+// Vars
+@import './common/scss/vars.scss';
+
+// Common stuff
+@import './common/scss/common.scss';
+@import './common/scss/tooltips.scss';
+
+// Components
+@import './components/header/header.scss';
+@import './components/mobile-menu/mobile-menu.scss';
+@import './components/footer/footer.scss';
+@import './components/about/about.scss';

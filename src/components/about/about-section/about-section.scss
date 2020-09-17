@@ -1,0 +1,258 @@
+.about {
+  &__section {
+    @include font('Roboto');
+    position: relative;
+    overflow: hidden;
+  }
+  &__content {
+    padding: 0 15px 80px;
+    max-height: 600px;
+    overflow: hidden;
+    transition: all 0.8s ease-in-out;
+
+    &.active {
+      max-height: 1000000px;
+      overflow: inherit;
+    }
+    @include min-w($widthMobileLarge) {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    @include min-w($widthTabletLarge) {
+      max-width: 650px;
+    }
+    @include min-w($widthDesktopSmall - 10) {
+      max-width: 800px;
+    }
+  }
+  &__hidden {
+    @include flex(center, flex-end);
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(
+      180deg,
+      hsla(0, 0%, 97%, 0) 30%,
+      hsla(0, 0%, 97%, 0.98) 72%,
+      #f7f7f7
+    );
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+  &__bg {
+    img {
+      height: 30vh;
+      @include min-w($widthTabletMedium) {
+        height: 35vh;
+      }
+      @include min-w($widthTabletLarge) {
+        height: 40vh;
+      }
+      @include min-w($widthDesktopSmall) {
+        height: 55vh;
+      }
+      @include min-w-h($widthDesktopSmall, $heightMedium) {
+        height: 65vh;
+      }
+      @include min-h($heightExtraLarge) {
+        max-height: 600px;
+      }
+    }
+    margin-bottom: 40px;
+  }
+  &__heading {
+    @include font(false, 30, false, 700);
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0;
+    @include min-w($widthTabletMedium) {
+      font-size: 36px;
+    }
+    @include min-w($widthTabletLarge) {
+      font-size: 40px;
+      font-weight: 900;
+    }
+    @include min-w($widthDesktopSmall) {
+      font-size: 70px;
+      margin-bottom: 16px;
+    }
+  }
+  &__subheading {
+    @include font(false, 14, false, 400);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: lowercase;
+    @include min-w($widthTabletLarge) {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+    @include min-w($widthDesktopSmall) {
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
+  }
+  // Стили текста
+  &__text {
+    p {
+      @include font('Nova', 18);
+      line-height: 1.56;
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      @include min-w($widthTabletMedium) {
+        line-height: 1.7em;
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+      @include min-w($widthDesktopSmall) {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+        font-size: 20px;
+      }
+    }
+    a {
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s ease-in-out;
+      color: #7c48d0;
+      text-decoration: none;
+      &:hover {
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+      &::before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #7c48d0;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        transform-origin: center;
+        transform: scaleX(0);
+        transition: transform 0.15s ease-in-out;
+      }
+    }
+    iframe {
+      border-radius: 10px !important;
+      overflow: hidden !important;
+      height: 260px;
+      width: 100%;
+      @include min-w($widthTabletMedium) {
+        height: 300px;
+      }
+      @include min-w($widthTabletLarge) {
+        height: 360px;
+      }
+      @include min-w($widthDesktopSmall) {
+        height: 400px;
+      }
+      @include min-w($widthDesktopMedium) {
+        height: 450px;
+      }
+    }
+  }
+  // Стили главного слайдера
+  .swiper-about {
+    position: relative;
+    .swiper-next,
+    .swiper-prev {
+      position: absolute;
+      top: calc(50% - 20px);
+      z-index: 10;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+      @include min-w($widthDesktopSmall) {
+        top: calc(50% - 32px);
+      }
+      svg {
+        stroke: #fff;
+        fill: none;
+        width: 20px;
+        height: 40px;
+        @include min-w($widthDesktopSmall) {
+          width: 30px;
+          height: 64px;
+        }
+      }
+    }
+    .swiper-next {
+      right: 10%;
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+    .swiper-prev {
+      left: 10%;
+      transform-origin: center;
+      transform: rotate(180deg);
+      &:active {
+        transform: rotate(180deg) scale(0.9);
+      }
+    }
+    .swiper-pag {
+      position: absolute;
+      left: 50%;
+      top: 90%;
+      transform: translateX(-50%);
+      z-index: 10;
+      bottom: auto;
+      @include center();
+      .swiper-pagination-bullet {
+        position: relative;
+        transition: background 0.4s linear;
+        opacity: 1;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 100%;
+          background: rgba(255, 255, 255, 1);
+          left: 0;
+          top: 1px;
+          z-index: 10;
+          transition: width 0.4s linear;
+          @include min-w($widthDesktopSmall) {
+            top: 0;
+          }
+        }
+      }
+      .swiper-pagination-bullet,
+      .swiper-pagination-bullet-active {
+        background: rgba(255, 255, 255, 0.5) !important;
+        border-radius: 0;
+        width: 15px;
+        height: 1px;
+        margin: 0 7px;
+        @include min-w($widthTabletMedium) {
+          width: 20px;
+        }
+        @include min-w($widthTabletLarge) {
+          margin: 0 15px;
+          width: 25px;
+        }
+        @include min-w($widthDesktopSmall) {
+          margin: 0 7px;
+          width: 80px;
+          height: 2px;
+        }
+      }
+      .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background: rgba(255, 255, 255, 1) !important;
+        @include min-w($widthDesktopSmall) {
+          background: rgba(255, 255, 255, 0.5) !important;
+        }
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
