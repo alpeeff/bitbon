@@ -5,7 +5,7 @@
     overflow: hidden;
   }
   &__content {
-    padding: 0 15px 80px;
+    padding: 0 25px 80px;
     max-height: 600px;
     overflow: hidden;
     transition: all 0.8s ease-in-out;
@@ -39,6 +39,7 @@
     left: 0;
     bottom: 0;
     z-index: 10;
+    padding-bottom: 80px;
   }
   &__bg {
     img {
@@ -92,71 +93,6 @@
     @include min-w($widthDesktopSmall) {
       font-size: 20px;
       margin-bottom: 35px;
-    }
-  }
-  // Стили текста
-  &__text {
-    p {
-      @include font('Nova', 18);
-      line-height: 1.56;
-      margin: 0;
-      &:not(:last-child) {
-        margin-bottom: 10px;
-      }
-      @include min-w($widthTabletMedium) {
-        line-height: 1.7em;
-        &:not(:last-child) {
-          margin-bottom: 15px;
-        }
-      }
-      @include min-w($widthDesktopSmall) {
-        &:not(:last-child) {
-          margin-bottom: 20px;
-        }
-        font-size: 20px;
-      }
-    }
-    a {
-      cursor: pointer;
-      position: relative;
-      transition: all 0.2s ease-in-out;
-      color: #7c48d0;
-      text-decoration: none;
-      &:hover {
-        &::before {
-          transform: scaleX(1);
-        }
-      }
-      &::before {
-        content: '';
-        width: 100%;
-        height: 2px;
-        background-color: #7c48d0;
-        position: absolute;
-        left: 0;
-        bottom: -2px;
-        transform-origin: center;
-        transform: scaleX(0);
-        transition: transform 0.15s ease-in-out;
-      }
-    }
-    iframe {
-      border-radius: 10px !important;
-      overflow: hidden !important;
-      height: 260px;
-      width: 100%;
-      @include min-w($widthTabletMedium) {
-        height: 300px;
-      }
-      @include min-w($widthTabletLarge) {
-        height: 360px;
-      }
-      @include min-w($widthDesktopSmall) {
-        height: 400px;
-      }
-      @include min-w($widthDesktopMedium) {
-        height: 450px;
-      }
     }
   }
   // Стили главного слайдера

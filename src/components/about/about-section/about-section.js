@@ -5,7 +5,7 @@ Swiper.use([Navigation, Pagination]);
 
 export default () => {
   const clickShowBtn = (event) => {
-    const btn = event.target.closest('.about__show');
+    const btn = event.target.closest('.btn[data-action="show-section"]');
     if (btn) {
       const content = btn.closest('.about__content');
       const hidden = btn.closest('.about__hidden');

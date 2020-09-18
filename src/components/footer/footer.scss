@@ -75,7 +75,7 @@
       }
     }
     &-item {
-      margin: 0 12px;
+      margin: 0 12px 15px;
       svg {
         fill: #5964aa;
         transition: all 0.4s ease-in-out;
@@ -108,6 +108,10 @@
       }
       @include min-w($widthTabletLarge) {
         font-size: 11px;
+      }
+      transition: color 0.22s;
+      &:hover {
+        color: lighten($color: #4a4858, $amount: 10);
       }
     }
     @include min-w($widthTabletMedium) {

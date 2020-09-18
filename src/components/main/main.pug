@@ -1,0 +1,29 @@
+.main
+  .main__section
+    .main__recommend
+      .container.container--main
+        include ../card/card.pug
+    .main__bonnie
+      .container.container--main
+        .main__title
+          p Рекомендуем
+          h2 BITBON SYSTEM
+          h3 (базовая информация о Системе Битбон)
+        .swipeable
+          .swipeable__list
+            a(href="/").main__icon
+              +svg('developer', 40, 40)
+              .main__icon-desc Компания разработчик
+            a(href="/").main__icon
+              +svg('developer', 40, 40)
+              .main__icon-desc White Paper Системы Bitbon
+            a(href="/").main__icon.main__icon--center
+              +svg('achievement', 40, 40)
+              h5 Суть проекта
+              p (Обязательно к прочтению)
+            a(href="/").main__icon
+              +svg('developer', 40, 40)
+              .main__icon-desc Статистика в графиках
+            a(href="/").main__icon
+              +svg('developer', 40, 40)
+              .main__icon-desc Глобальные перспективы

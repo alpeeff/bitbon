@@ -27,7 +27,6 @@ module.exports = {
   devServer: {
     port: 3000,
     stats: 'errors-only',
-    open: true,
     watchOptions: {
       poll: true,
     },
@@ -91,7 +90,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpeg|gif)$/,
+        test: /\.(png|jpeg|gif|jpg)$/,
         use: ['file-loader'],
       },
       {

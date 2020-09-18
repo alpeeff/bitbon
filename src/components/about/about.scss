@@ -1,6 +1,7 @@
 @import './about-section/about-section.scss';
 @import './about-menu/about-menu.scss';
 .about {
+  padding-top: 120px;
   // Главный экран страницы
   &__top {
     min-height: calc(100vh - 100px);
@@ -79,87 +80,4 @@
     }
   }
   // Стили кнопок
-  &__btn {
-    @include center;
-    position: relative;
-    padding: 18px 15px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 13px;
-    overflow: hidden;
-    box-shadow: 0 10px 29px rgba(228, 132, 50, 0.5);
-    &:hover {
-      &::after {
-        opacity: 1;
-      }
-    }
-    @include min-w($widthTabletLarge) {
-      padding: 18px 35px;
-    }
-    span {
-      @include font(false, 14, #fff);
-      margin: 0 10px;
-      position: relative;
-      z-index: 10;
-      @include min-w($widthTabletMedium) {
-        font-size: 16px;
-      }
-      @include min-w($widthTabletLarge) {
-        font-size: 18px;
-      }
-    }
-    svg {
-      position: relative;
-      z-index: 10;
-      fill: rgba(255, 255, 255, 0.8);
-    }
-    &::after,
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-    &::before {
-      transition: z-index 0.2s ease-in-out;
-      background-image: linear-gradient(45deg, #e8a127, #e48432);
-      z-index: 2;
-    }
-    &::after {
-      transition: all 0.2s ease-in-out;
-      z-index: 3;
-      opacity: 0;
-      background-image: linear-gradient(45deg, #e48432, #e8a127);
-    }
-  }
-  &__show {
-    @include center();
-    transition: all 0.2s ease-in-out;
-    border-radius: 10px;
-    background-color: rgba(79, 94, 179, 0.1);
-    border: none;
-    outline: none;
-    padding: 16px 15px;
-    transition: background 0.15s ease;
-    margin-bottom: 80px;
-    @include min-w($widthDesktopSmall) {
-      width: 360px;
-      &:hover {
-        background-color: rgba(79, 94, 179, 0.15);
-      }
-    }
-    cursor: pointer;
-    svg {
-      fill: none;
-      stroke: #3f5eb3;
-    }
-    span {
-      @include font(false, 15, #3f5eb3, 300);
-      margin: 0 20px;
-    }
-  }
 }

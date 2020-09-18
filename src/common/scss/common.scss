@@ -29,6 +29,10 @@ body {
   }
 }
 
+.wrapper {
+  overflow-x: hidden;
+}
+
 img {
   width: 100%;
   height: 100%;
@@ -36,11 +40,21 @@ img {
   object-position: center;
 }
 
+svg:not(:root) {
+  overflow: hidden;
+}
+
 // Containers
 .container {
-  max-width: 1200px;
+  max-width: 1150px;
   width: 100%;
   margin: 0 auto;
+  &.container--main {
+    padding: 0 25px;
+    @include min-w($widthDesktopSmall) {
+      max-width: 1200px;
+    }
+  }
   &--header {
     padding: 0 19px;
     @include min-w($widthDesktopSmall) {
@@ -65,11 +79,6 @@ img {
   }
 }
 
-.wrapper {
-  padding-top: 120px;
-  position: relative;
-}
-
 .video {
   margin-bottom: 35px;
   margin-top: 45px;
@@ -84,6 +93,15 @@ $borderRadius: 20px;
   padding: 20px 25px;
   border-radius: $borderRadius;
   text-decoration: none;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  span {
+    position: relative;
+    z-index: 4;
+  }
   &.btn--primary {
     color: #fff;
     font-size: 20px;
@@ -91,11 +109,6 @@ $borderRadius: 20px;
     background-image: linear-gradient(90deg, #565dd6 0, #8147c1);
     max-width: 270px;
     padding: 25px 70px;
-    position: relative;
-    span {
-      position: relative;
-      z-index: 4;
-    }
     &:hover {
       &::before {
         opacity: 1;
@@ -121,56 +134,83 @@ $borderRadius: 20px;
       border-radius: 15px;
     }
   }
-}
-
-// Типография
-.caption {
-  @include font('Nova', 14, #848484);
-  font-style: italic;
-  text-align: center;
-  margin-top: 15px;
-}
-
-// Списки
-.about__text {
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 20px;
-    li {
+  &.btn--secondary {
+    @include center;
+    padding: 18px 15px;
+    border-radius: 13px;
+    box-shadow: 0 10px 29px rgba(228, 132, 50, 0.5);
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+    @include min-w($widthTabletLarge) {
+      padding: 18px 35px;
+    }
+    span {
+      @include font(false, 14, #fff);
+      margin: 0 10px;
       position: relative;
-      padding-left: 25px;
-      @include font('Nova', 18);
-      line-height: 1.8;
-      &:not(:last-child) {
-        margin-bottom: 14px;
+      @include min-w($widthTabletMedium) {
+        font-size: 16px;
       }
-      &::before {
-        content: '';
-        position: absolute;
-        top: 13px;
-        left: 0;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: #856fd0;
+      @include min-w($widthTabletLarge) {
+        font-size: 18px;
       }
-      @include min-w($widthDesktopSmall) {
-        &:not(:last-child) {
-          margin-bottom: 14px;
-        }
-        font-size: 20px;
-        line-height: 2;
-        &::before {
-          top: 17px;
-        }
+    }
+    svg {
+      position: relative;
+      z-index: 10;
+      fill: rgba(255, 255, 255, 0.8);
+    }
+    &::after,
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    &::before {
+      transition: z-index 0.2s ease-in-out;
+      background-image: linear-gradient(45deg, #e8a127, #e48432);
+      z-index: 2;
+    }
+    &::after {
+      transition: all 0.2s ease-in-out;
+      z-index: 3;
+      opacity: 0;
+      background-image: linear-gradient(45deg, #e48432, #e8a127);
+    }
+  }
+  &.btn--blue {
+    @include center();
+    transition: all 0.2s ease-in-out;
+    border-radius: 10px;
+    background-color: rgba(79, 94, 179, 0.1);
+    padding: 16px 15px;
+    transition: background 0.15s ease;
+    z-index: 15;
+    @include min-w($widthDesktopSmall) {
+      width: 360px;
+      &:hover {
+        background-color: rgba(79, 94, 179, 0.15);
       }
+    }
+    svg {
+      fill: none;
+      stroke: #3f5eb3;
+    }
+    span {
+      @include font(false, 15, #3f5eb3, 300);
+      margin: 0 20px;
     }
   }
 }
 
 // Ленивая загрузка
-
 .lazy {
   transition: all ease 0.3s;
   background-color: rgb(189, 189, 189);

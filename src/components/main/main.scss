@@ -1,0 +1,125 @@
+.main {
+  padding-bottom: 50px;
+  background-color: #ffffff;
+  &__container {
+    padding: 0 25px;
+  }
+  &__section {
+    background: linear-gradient(
+      180deg,
+      #fffaff 0,
+      #f5f1ff 35%,
+      #fefcff 74%,
+      #f2eeff
+    );
+    border-radius: 0 0 33px 33px;
+    background-image: url(./assets/main-bg-mobile.jpeg);
+    @include min-w($widthTabletMedium) {
+      background-image: url(./assets/main-bg.jpeg);
+      background-size: cover;
+      background-position: 0 0;
+    }
+  }
+  &__recommend {
+    padding-top: 120px;
+    padding-bottom: 65px;
+    @include min-w($widthDesktopSmall) {
+      padding-top: 200px;
+      padding-bottom: 145px;
+    }
+  }
+  // Titles
+  &__title {
+    text-align: center;
+    margin-bottom: 85px;
+    @include font('Roboto');
+    p {
+      @include font(false, 29, #53595e);
+      line-height: 1.22;
+      margin-bottom: 3px;
+    }
+    h2 {
+      @include font(false, 35, #303336, 700);
+      line-height: 1.4;
+      margin-top: 0;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+      @include font(false, 14, #7e8388, 400);
+      line-height: 1.5;
+    }
+  }
+  .swipeable {
+    position: relative;
+    margin-bottom: 40px;
+    overflow-x: scroll;
+    left: -25px;
+    width: 100vw;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &__list {
+      @include flex(flex-start, center, row, nowrap);
+      padding: 35px 0;
+      @include min-w($widthTabletLarge) {
+        justify-content: center;
+      }
+    }
+    @include min-w($widthTabletLarge) {
+      width: 100%;
+      left: auto;
+      overflow-x: initial;
+    }
+  }
+  &__bonnie {
+    padding-bottom: 80px;
+  }
+  &__icon {
+    display: block;
+    margin: 0 10px;
+    flex: 0 0 150px;
+    text-align: center;
+    @include font('Roboto');
+    text-decoration: none;
+    &-desc {
+      @include font(false, 15, #595959);
+      line-height: 1.47;
+    }
+    svg {
+      fill: none;
+      stroke: #6661b9;
+      margin-bottom: 10px;
+      transition: transform 0.33s ease;
+    }
+    &:hover {
+      svg {
+        transform: scale(1.2);
+      }
+    }
+    &.main__icon--center {
+      flex: 0 0 210px;
+      position: relative;
+      padding: 40px 20px 35px;
+      margin: 0 20px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px -15px rgba(68, 65, 78, 0.3);
+      p {
+        @include font(false, 12, #8e8990);
+        margin: 0;
+      }
+      h5 {
+        @include font(false, 20, #595959, 400);
+        line-height: 1.1;
+        margin-bottom: 8px;
+        margin-top: 0;
+      }
+      svg {
+        stroke: #009920;
+      }
+    }
+  }
+}
