@@ -1,11 +1,29 @@
 .bonnie {
-  position: relative;
   @include font('Nova');
+  &__wrapper {
+    @include min-w($widthDesktopSmall) {
+      @include flex(space-between, flex-start, row, nowrap);
+    }
+  }
   &__figure {
     margin-bottom: 65px;
+    position: relative;
+    z-index: 15;
+    @include min-w($widthDesktopSmall) {
+      flex: 0 0 50%;
+      order: 2;
+      margin-bottom: 85px;
+    }
     #bonnie {
       position: relative;
       transform: scale(1.45);
+      margin: 0 auto;
+      width: 330px;
+      height: 360px;
+      @include min-w($widthTabletMedium) {
+        width: 400px;
+        height: 440px;
+      }
     }
   }
   &__bubbles {
@@ -14,6 +32,34 @@
     top: -50px;
     svg {
       fill: #fff;
+    }
+  }
+  &__overlay {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(13px);
+    backdrop-filter: blur(13px);
+    border-radius: 0 0 33px 33px;
+    background: linear-gradient(
+      180deg,
+      rgba(199, 184, 237, 0),
+      rgba(199, 184, 237, 0.3) 47%,
+      rgba(199, 184, 237, 0)
+    );
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all ease 0.33s;
+    &.active {
+      z-index: 10;
+      pointer-events: all;
+      opacity: 1;
     }
   }
   &__list {
@@ -34,12 +80,41 @@
         font-size: 14px;
       }
     }
+    @include min-w($widthTabletMedium) {
+      @include flex(space-between, center);
+    }
+    @include min-w($widthDesktopSmall) {
+      flex: 0 0 25%;
+      flex-direction: column;
+      align-items: stretch;
+      order: 3;
+      margin-top: 90px;
+    }
     &-item {
       border-radius: 12px;
       background: hsla(0, 0%, 100%, 0.5);
       padding: 15px;
       margin-bottom: 15px;
+      position: relative;
       @include flex(flex-start, center, row, nowrap);
+      @include min-w($widthTabletMedium) {
+        flex: 0 0 48%;
+      }
+      @include min-w($widthDesktopSmall) {
+        background-color: transparent;
+        margin-bottom: 0;
+        &::before {
+          content: '';
+          position: absolute;
+          top: auto;
+          left: -70px;
+          display: block;
+          border-top: 4px dotted #b1a7c2;
+          height: 4px;
+          width: 64px;
+          transform: scale(0.5);
+        }
+      }
     }
     &-icon {
       svg {
@@ -77,14 +152,25 @@
     border-radius: 30px;
     position: relative;
     margin-top: 8px;
+    max-width: 550px;
+    margin: 0 auto;
+    transition: all ease 0.22s;
   }
   &__step {
+    display: none;
+    &.active {
+      display: block;
+    }
     &-title {
       @include font(false, 16, #876faa);
       margin-bottom: 15px;
       text-align: center;
       @include min-w($widthMobileMedium) {
         font-size: 22px;
+      }
+      @include min-w($widthDesktopSmall) {
+        font-size: 26px;
+        margin-bottom: 20px;
       }
     }
     &-text {
@@ -95,33 +181,69 @@
       @include min-w($widthMobileMedium) {
         font-size: 17px;
       }
+      @include min-w($widthDesktopSmall) {
+        font-size: 20px;
+        margin-bottom: 24px;
+      }
     }
-    &-btn {
-      display: block;
+  }
+  &__btn {
+    display: block;
+    line-height: 1.22;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    margin: 0 auto;
+    &--next {
       @include font(false, 16, #5575c5);
-      line-height: 1.22;
       text-decoration: underline;
-      border: none;
-      background-color: transparent;
-      outline: none;
-      cursor: pointer;
-      margin: 0 auto;
+      @include min-w($widthDesktopSmall) {
+        font-size: 18px;
+      }
+    }
+    &--close {
+      @include font(false, 14, #936262);
+      margin-top: 28px;
+      text-decoration: none;
     }
   }
   .crowdsale {
-    max-width: 280px;
-    width: 100%;
-    margin: 0 auto;
     @include font('Roboto');
+    @include min-w($widthDesktopSmall) {
+      position: relative;
+      flex: 0 0 25%;
+      order: 1;
+      margin-top: 135px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 48%;
+        right: -50px;
+        display: block;
+        border-top: 4px dotted #b1a7c2;
+        height: 4px;
+        width: 64px;
+        transform: scale(0.5);
+      }
+    }
     &__interval {
       margin-bottom: 25px;
     }
     &__wrapper {
-      margin-bottom: 40px;
+      max-width: 280px;
+      width: 100%;
+      margin: 0 auto 40px;
       p {
         @include font(false, 14, #8b819b);
         line-height: 1.4;
         text-align: center;
+        margin: 0;
+        @include min-w($widthDesktopSmall) {
+          text-align: left;
+        }
+      }
+      @include min-w($widthDesktopSmall) {
         margin: 0;
       }
     }
@@ -133,6 +255,9 @@
         display: inline;
         @include font(false, 23, false, 500);
       }
+      @include min-w($widthDesktopSmall) {
+        text-align: left;
+      }
     }
     &__slogan {
       p {
@@ -140,10 +265,21 @@
         text-align: center;
         line-height: 1.5;
         margin: 0;
+        @include min-w($widthTabletSmall) {
+          font-size: 14px;
+        }
+        @include min-w($widthDesktopSmall) {
+          font-size: 16px;
+        }
       }
     }
-    .btn {
-      margin-bottom: 35px;
+  }
+  .btn.btn--primary {
+    margin-bottom: 35px;
+    @include min-w($widthDesktopSmall) {
+      margin-bottom: 55px;
+      padding: 24px 90px;
+      max-width: 350px;
     }
   }
 }

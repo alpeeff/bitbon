@@ -98,6 +98,9 @@ svg:not(:root) {
     padding: 35px 0;
     @include min-w($widthTabletLarge) {
       justify-content: center;
+      &.start {
+        justify-content: flex-start;
+      }
     }
   }
   @include min-w($widthTabletLarge) {
