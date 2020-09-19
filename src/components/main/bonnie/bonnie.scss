@@ -74,6 +74,9 @@
         &:not(:last-child) {
           margin-right: 20px;
         }
+        &::before {
+          display: none;
+        }
       }
       .bonnie__list-subtitle {
         display: inline;
