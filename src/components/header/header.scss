@@ -185,6 +185,7 @@
   position: absolute;
   top: 20px;
   width: 100%;
+  z-index: 10;
   &.fixed {
     position: fixed;
     top: 0;

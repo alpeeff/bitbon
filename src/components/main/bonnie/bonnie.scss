@@ -1,0 +1,149 @@
+.bonnie {
+  position: relative;
+  @include font('Nova');
+  &__figure {
+    margin-bottom: 65px;
+    #bonnie {
+      position: relative;
+      transform: scale(1.45);
+    }
+  }
+  &__bubbles {
+    position: absolute;
+    right: 40%;
+    top: -50px;
+    svg {
+      fill: #fff;
+    }
+  }
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    &.bonnie__list--footer {
+      @include flex(flex-start, stretch, row, nowrap);
+      .bonnie__list-item {
+        flex: 1 0 370px;
+        background-color: transparent;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+      .bonnie__list-subtitle {
+        display: inline;
+        font-size: 14px;
+      }
+    }
+    &-item {
+      border-radius: 12px;
+      background: hsla(0, 0%, 100%, 0.5);
+      padding: 15px;
+      margin-bottom: 15px;
+      @include flex(flex-start, center, row, nowrap);
+    }
+    &-icon {
+      svg {
+        fill: #958ba6;
+      }
+    }
+    &-text {
+      margin-left: 30px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: -14.5px;
+        background: rgba(133, 144, 147, 0.3);
+      }
+    }
+    &-title {
+      @include font(false, 18, #7f7096, 600);
+      margin-bottom: 4px;
+    }
+    &-subtitle {
+      @include font(false, 14, #8b819b);
+    }
+    &-inline {
+      display: inline;
+      @include font(false, 14, #7c767f, 700);
+    }
+  }
+  &__steps {
+    padding: 38px 30px 22px;
+    background-color: #fff;
+    border-radius: 30px;
+    position: relative;
+    margin-top: 8px;
+  }
+  &__step {
+    &-title {
+      @include font(false, 16, #876faa);
+      margin-bottom: 15px;
+      text-align: center;
+      @include min-w($widthMobileMedium) {
+        font-size: 22px;
+      }
+    }
+    &-text {
+      @include font(false, 14, #3c3b3c, 300);
+      line-height: 1.5;
+      margin-bottom: 18px;
+      text-align: center;
+      @include min-w($widthMobileMedium) {
+        font-size: 17px;
+      }
+    }
+    &-btn {
+      display: block;
+      @include font(false, 16, #5575c5);
+      line-height: 1.22;
+      text-decoration: underline;
+      border: none;
+      background-color: transparent;
+      outline: none;
+      cursor: pointer;
+      margin: 0 auto;
+    }
+  }
+  .crowdsale {
+    max-width: 280px;
+    width: 100%;
+    margin: 0 auto;
+    @include font('Roboto');
+    &__interval {
+      margin-bottom: 25px;
+    }
+    &__wrapper {
+      margin-bottom: 40px;
+      p {
+        @include font(false, 14, #8b819b);
+        line-height: 1.4;
+        text-align: center;
+        margin: 0;
+      }
+    }
+    &__amount {
+      @include font(false, 23, #7a7096);
+      margin-bottom: 25px;
+      text-align: center;
+      p {
+        display: inline;
+        @include font(false, 23, false, 500);
+      }
+    }
+    &__slogan {
+      p {
+        @include font(false, 12, #7c767f);
+        text-align: center;
+        line-height: 1.5;
+        margin: 0;
+      }
+    }
+    .btn {
+      margin-bottom: 35px;
+    }
+  }
+}

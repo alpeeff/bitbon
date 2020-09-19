@@ -6,6 +6,7 @@ import lazy from 'vanilla-lazyload';
 import header from './components/header/header';
 import mobileMenu from './components/mobile-menu/mobile-menu';
 import about from './components/about/about';
+import main from './components/main/main';
 
 // styles
 import './index.scss';
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   header();
   mobileMenu();
   about();
+  main();
   // Libs
   aos.init({
     disable: 'phone',

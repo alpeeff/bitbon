@@ -1,5 +1,7 @@
 .main
   .main__section
+    .main__section-image
+     +image('main-bg.jpeg')
     .main__recommend
       .container.container--main
         include ../card/card.pug
@@ -27,3 +29,4 @@
             a(href="/").main__icon
               +svg('developer', 40, 40)
               .main__icon-desc Глобальные перспективы
+        include ./bonnie/bonnie.pug

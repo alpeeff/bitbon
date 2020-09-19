@@ -55,8 +55,61 @@
 </g>
 </symbol><clipPath id="articles-mobile_SVGID_2_">
 		<use xlink:href="#articles-mobile_SVGID_1_" style="overflow:visible;" />
+	</clipPath><symbol viewBox="0 0 29 64" id="bonnie-bubbles">
+  <defs>
+    <style>
+      #bonnie-bubbles .cls-1 {
+        fill: #f9f8fd;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="bonnie-bubbles_Эллипс_1727_копия" data-name="Эллипс 1727 копия" class="cls-1" d="M14.5,34.563A14.72,14.72,0,0,1,14.5,64,14.72,14.72,0,0,1,14.5,34.563ZM11.969,15.375a7.032,7.032,0,1,1-6.937,7.031A6.985,6.985,0,0,1,11.969,15.375ZM9.453,0a4.453,4.453,0,0,1,4.422,4.484,4.422,4.422,0,1,1-8.844,0A4.453,4.453,0,0,1,9.453,0Z" />
+</symbol><symbol viewBox="0 0 486.7 413.4" id="business">
+<g>
+	<defs>
+		<rect id="business_SVGID_1_" x="0" width="486.7" height="413.4" />
+	</defs>
+	
+	<path class="st0" d="M33,325.7v78.9c0,4.8,3.9,8.8,8.8,8.8h61c4.8,0,8.8-3.9,8.8-8.8V265.8l-44.3,44.3
+		C57.9,319.4,45.9,324.8,33,325.7" />
+	<path class="st0" d="M142,264.8v139.8c0,4.8,3.9,8.8,8.8,8.8h61c4.8,0,8.8-3.9,8.8-8.8v-82.3c-13.9-0.3-26.9-5.8-36.7-15.6
+		L142,264.8z" />
+	<path class="st0" d="M251,313.6v91c0,4.8,3.9,8.8,8.8,8.8h61c4.8,0,8.8-3.9,8.8-8.8V236.7l-69.9,69.9
+		C257,309.3,254.1,311.6,251,313.6" />
+	<path class="st0" d="M432.7,133.5L360,206.2v198.4c0,4.8,3.9,8.8,8.8,8.8h61c4.8,0,8.8-3.9,8.8-8.8V139c-2-1.7-3.5-3.2-4.6-4.2
+		L432.7,133.5z" />
+	<path class="st0" d="M482.6,4.7c-2.9-3.1-7.3-4.7-12.9-4.7h-1.6c-28.4,1.3-56.7,2.7-85.1,4c-3.8,0.2-9,0.4-13.1,4.5
+		c-1.3,1.3-2.3,2.8-3.1,4.6c-4.2,9.1,1.7,15,4.5,17.8l7.1,7.2c4.9,5,9.9,10,14.9,14.9L221.7,224.7l-77.1-77.1
+		c-4.6-4.6-10.8-7.2-17.4-7.2c-6.6,0-12.7,2.6-17.3,7.2L7.2,250.2c-9.6,9.6-9.6,25.1,0,34.7l4.6,4.6c4.6,4.6,10.8,7.2,17.4,7.2
+		c6.6,0,12.7-2.6,17.3-7.2l80.7-80.7l77.1,77.1c4.6,4.6,10.8,7.2,17.4,7.2c6.6,0,12.7-2.6,17.4-7.2L432.7,92.3l21.9,21.8
+		c2.6,2.6,6.2,6.2,11.7,6.2c2.3,0,4.6-0.6,7-1.9c1.6-0.9,3-1.9,4.2-3.1c4.3-4.3,5.1-9.8,5.3-14.1c0.8-18.4,1.7-36.8,2.6-55.3
+		l1.3-27.7C487,12.4,485.7,7.9,482.6,4.7" />
+</g>
+</symbol><clipPath id="business_SVGID_2_">
+		<use xlink:href="#business_SVGID_1_" style="overflow:visible;" />
 	</clipPath><symbol viewBox="0 0 9.4 9.4" id="close">
 <path class="st0" d="M8.7,1.1L8.3,0.7L4.7,4.3L1.1,0.7L0.7,1.1l3.6,3.6L0.7,8.3l0.4,0.4l3.6-3.6l3.6,3.6l0.4-0.4L5.1,4.7L8.7,1.1z" />
+</symbol><symbol viewBox="0 0 463 463" id="contributing">
+<g>
+	<path class="st0" d="M304.6,227.3c0.4,1,0.7,2.1,0.7,3.2c0,4.5-3.6,8.1-8.1,8.1H178c-4.5,0-8.1-3.6-8.1-8.1s3.6-8.1,8.1-8.1h104.9
+		c-26.9-8.9-49.6-27.3-64-51.1H178c-4.5,0-8.1-3.6-8.1-8.1v0c0-4.5,3.6-8.1,8.1-8.1h32.8c-5.6-13.7-8.7-28.7-8.7-44.4
+		c0-8.2,0.8-16.2,2.4-24H94.2c-16.3,0-29.5,13.2-29.5,29.5v305.3c0,16.3,13.2,29.5,29.5,29.5H312c16.3,0,29.5-13.2,29.5-29.5V226.3
+		c-7,1.3-14.3,2-21.7,2C314.7,228.3,309.6,228,304.6,227.3z M125.5,389.9c-13.6,0-24.6-11-24.6-24.6s11-24.6,24.6-24.6
+		s24.6,11,24.6,24.6S139.1,389.9,125.5,389.9z M125.5,322.5c-13.6,0-24.6-11-24.6-24.6c0-13.6,11-24.6,24.6-24.6s24.6,11,24.6,24.6
+		C150.1,311.5,139.1,322.5,125.5,322.5z M125.5,255.1c-13.6,0-24.6-11-24.6-24.6s11-24.6,24.6-24.6s24.6,11,24.6,24.6
+		S139.1,255.1,125.5,255.1z M125.5,187.7c-13.6,0-24.6-11-24.6-24.6c0-13.6,11-24.6,24.6-24.6s24.6,11,24.6,24.6
+		C150.1,176.7,139.1,187.7,125.5,187.7z M297.1,373.5H178c-4.5,0-8.1-3.6-8.1-8.1s3.6-8.1,8.1-8.1h119.2c4.5,0,8.1,3.6,8.1,8.1
+		S301.6,373.5,297.1,373.5z M305.3,297.9c0,4.5-3.6,8.1-8.1,8.1H178c-4.5,0-8.1-3.6-8.1-8.1v0c0-4.5,3.6-8.1,8.1-8.1h119.2
+		C301.6,289.8,305.3,293.4,305.3,297.9L305.3,297.9z" />
+	<path class="st0" d="M319.8,12.1c-54.4,0-98.4,44.1-98.4,98.4s44.1,98.4,98.4,98.4c54.4,0,98.4-44.1,98.4-98.4
+		S374.2,12.1,319.8,12.1z M359,89.3h-25.7c0-5.6-1.1-9.8-3.3-12.6c-2.2-2.8-5.1-4.2-8.7-4.2c-3.7,0-6.4,1.1-8.2,3.4
+		c-1.8,2.3-2.6,5.2-2.6,8.7c0,3.6,0.9,6.5,2.8,8.7c1.9,2.2,5.4,4.5,10.6,6.8c12,5.1,20.8,10.2,26.5,15.3c5.6,5.1,8.5,12.4,8.5,21.9
+		c0,9-2.8,16.3-8.5,21.7c-5.7,5.5-13.3,8.7-22.9,9.7v15.6h-12.3v-15.7c-10-1-18.4-4.5-25-10.5c-6.6-6-9.8-14.9-9.6-26.5l0.2-0.5
+		h25.5c0,6.4,1.4,11,4.2,13.9c2.8,2.8,6.4,4.2,10.9,4.2c3.7,0,6.5-1.1,8.5-3.3c1.9-2.2,2.9-5,2.9-8.5c0-4.1-1-7.3-3-9.5
+		c-2-2.3-5.5-4.5-10.5-6.6c-12.2-4.9-21.1-9.8-26.7-14.8c-5.6-5-8.3-12.3-8.3-22c0-8.7,3-16,8.9-21.6c5.9-5.7,13.8-9,23.6-9.9V36.6
+		h12.3v16.7c9.3,1.3,16.7,5.2,22.1,11.5c5.4,6.3,8.1,14.4,7.9,24.1L359,89.3z" />
+</g>
 </symbol><symbol viewBox="0 0 40 31.7" id="developer">
 <style type="text/css">
 	#developer .dev1{fill:url(#developer_Прямоугольник_скругл._углы1106_1_);stroke:#6661B9;}
@@ -80,7 +133,23 @@
 </symbol><linearGradient id="developer_Прямоугольник_скругл._углы1106_1_" gradientUnits="userSpaceOnUse" x1="2.3483" y1="106.309" x2="24.3483" y2="128.309" gradientTransform="matrix(1 0 0 -1 0 138.3147)">
 		<stop offset="0" style="stop-color:#3936C8;stop-opacity:0.502" />
 		<stop offset="1" style="stop-color:#7436C8;stop-opacity:0.302" />
-	</linearGradient><symbol viewBox="0 0 19.8 12.1" id="eye">
+	</linearGradient><symbol viewBox="0 0 453.9 512" id="exchange">
+<g>
+	<defs>
+		<rect id="exchange_SVGID_1_" x="0" width="453.9" height="512" />
+	</defs>
+	
+	<path class="st0" d="M446.2,79.8L357.4,5c-9-7.6-22.5-6.4-30.1,2.6c-7.6,9-6.4,22.5,2.6,30.1l44,37.4H163.1
+		C96.3,75.1,42.1,129.3,42,196.2v38.3c0,11.8,9.6,21.3,21.3,21.3s21.3-9.6,21.3-21.3v-38.7c0.1-43.3,35.1-78.4,78.4-78.4h211
+		l-44,37.4c-9,7.6-10.2,21-2.6,30.1c7.6,9,21,10.2,30.1,2.6l88.8-74.8c9-7.6,10.2-21,2.6-30c-0.8-0.9-1.7-1.8-2.6-2.6L446.2,79.8z" />
+	<path class="st0" d="M389.9,255.9c-11.8,0-21.3,9.6-21.3,21.3v38.7c-0.1,43.3-35.1,78.4-78.4,78.4h-211l44-37.4
+		c10.3-5.7,14.1-18.7,8.4-29c-5.7-10.3-18.7-14.1-29-8.4c-2.4,1.3-4.5,3.1-6.2,5.2L7.6,399.5c-9,7.6-10.2,21-2.6,30
+		c0.8,0.9,1.7,1.8,2.6,2.6L96.4,507c9,7.6,22.5,6.4,30.1-2.6c7.6-9,6.4-22.5-2.6-30.1l-44-37.4h210.4c66.8-0.1,121-54.2,121.1-121.1
+		v-38.7C411.2,265.4,401.7,255.9,389.9,255.9" />
+</g>
+</symbol><clipPath id="exchange_SVGID_2_">
+		<use xlink:href="#exchange_SVGID_1_" style="overflow:visible;" />
+	</clipPath><symbol viewBox="0 0 19.8 12.1" id="eye">
 <style type="text/css">
 	#eye .st0{fill:none;stroke:#9E9E9F;stroke-width:1.3735;stroke-linecap:round;stroke-linejoin:round;}
 	#eye .st1{fill:#9E9E9F;}
@@ -113,6 +182,12 @@
 		<path d="M78.7,90.9C62.5,119,32.5,136.3,0,136.3C16.2,108.2,46.2,90.8,78.7,90.9z" />
 	</g>
 </g>
+</symbol><symbol viewBox="0 0 387 387" id="mining">
+<path class="st0" d="M291.7,90.4l10.2-10.2c2.7-2.7,2.7-7,0-9.6l-19.3-19.3c-2.7-2.7-7-2.7-9.6,0l-10.2,10.2
+	C213.8,19.9,152.3-0.3,94.7,7.3c-3,0.4-5.4,2.8-5.9,5.8c-0.4,3,1.2,6,4.1,7.2c37.6,16.1,76,40.5,111.4,70.8l-27.7,27.7
+	c-2.7,2.7-2.7,7,0,9.6l9.6,9.6L2,322.3c-2.7,2.7-2.7,7,0,9.6l19.3,19.3c1.3,1.3,3.1,2,4.8,2s3.5-0.7,4.8-2l184.3-184.3l9.6,9.6
+	c2.6,2.6,7.1,2.6,9.6,0l27.7-27.7c30.2,35.4,54.6,73.8,70.8,111.4c1.1,2.5,3.6,4.1,6.3,4.1c0.3,0,0.6,0,0.9-0.1
+	c3-0.4,5.4-2.8,5.8-5.9C353.4,200.9,333.3,139.4,291.7,90.4z" />
 </symbol><symbol viewBox="0 0 387 387" id="mining-mobile">
 <path class="st0" d="M291.7,90.4l10.2-10.2c2.7-2.7,2.7-7,0-9.6l-19.3-19.3c-2.7-2.7-7-2.7-9.6,0l-10.2,10.2
 	C213.8,19.9,152.3-0.3,94.7,7.3c-3,0.4-5.4,2.8-5.9,5.8c-0.4,3,1.2,6,4.1,7.2c37.6,16.1,76,40.5,111.4,70.8l-27.7,27.7
@@ -170,4 +245,4 @@
 	c-13.3,12.5-19,31.2-14.8,49C81.9,60.9,43.4,41.4,17.4,9.4C3.8,32.8,10.7,62.8,33.3,77.8c-8.2-0.2-16.1-2.4-23.3-6.4
 	c0,0.2,0,0.4,0,0.6c0,24.4,17.2,45.4,41.2,50.3c-7.6,2.1-15.5,2.4-23.2,0.9c6.7,20.9,26,35.2,47.9,35.6c-18.2,14.3-40.6,22-63.7,22
 	c-4.1,0-8.2-0.3-12.2-0.7C23.5,195.2,50.7,203.1,78.6,203.1" />
-</symbol><symbol viewBox="0 0 20 20" id="vk"><defs><style>#vk .cls-1{fill:#5963aa;}</style></defs><g id="vk_Layer_2" data-name="Layer 2"><g id="vk_Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M17.14288,0H2.85712A2.85711,2.85711,0,0,0,0,2.85712V17.14288A2.85711,2.85711,0,0,0,2.85712,20H17.14288A2.85711,2.85711,0,0,0,20,17.14288V2.85712A2.85711,2.85711,0,0,0,17.14288,0Zm.53443,15.00031H15.848c-.69671,0-.90216-.56092-2.14014-1.80909-1.08251-1.05621-1.5487-1.19262-1.81933-1.19262-.36585,0-.47614.10614-.47614.63171v1.65247c0,.45477-.14038.71753-1.30316.71753A7.10244,7.10244,0,0,1,4.53583,11.6297C2.27045,8.431,1.64893,6.01031,1.64893,5.5202c0-.27295.10528-.52051.62652-.52051H4.1048c.46612,0,.64148.20716.817.71753.8971,2.62775,2.4007,4.922,3.02222,4.922.23547,0,.34076-.10608.34076-.70245V7.22308C8.21454,5.975,7.558,5.87384,7.558,5.42914a.443.443,0,0,1,.46613-.42444h2.87183c.38592,0,.51623.20715.51623.67712V9.33038c0,.389.17542.52558.29071.52558.23047,0,.426-.13642.852-.566a15.4107,15.4107,0,0,0,2.2453-3.76978.7945.7945,0,0,1,.797-.52051h1.82928c.55133,0,.66663.28809.55133.67713H17.968c-.23554,1.07129-2.46088,4.23474-2.46088,4.23474-.19543.31323-.27057.4649,0,.8186.1955.27283.832.82367,1.25806,1.329a7.92055,7.92055,0,0,1,1.5437,2.15784C18.45917,14.73755,18.19855,15.00031,17.67731,15.00031Z" /></g></g></symbol></defs><use id="360-usage" xlink:href="#360" class="sprite-symbol-usage" /><use id="achievement-usage" xlink:href="#achievement" class="sprite-symbol-usage" /><use id="arrow-hide-usage" xlink:href="#arrow-hide" class="sprite-symbol-usage" /><use id="arrow-slider-usage" xlink:href="#arrow-slider" class="sprite-symbol-usage" /><use id="arrows-usage" xlink:href="#arrows" class="sprite-symbol-usage" /><use id="articles-mobile-usage" xlink:href="#articles-mobile" class="sprite-symbol-usage" /><use id="close-usage" xlink:href="#close" class="sprite-symbol-usage" /><use id="developer-usage" xlink:href="#developer" class="sprite-symbol-usage" /><use id="eye-usage" xlink:href="#eye" class="sprite-symbol-usage" /><use id="facebook-usage" xlink:href="#facebook" class="sprite-symbol-usage" /><use id="instagram-usage" xlink:href="#instagram" class="sprite-symbol-usage" /><use id="logo-usage" xlink:href="#logo" class="sprite-symbol-usage" /><use id="mining-mobile-usage" xlink:href="#mining-mobile" class="sprite-symbol-usage" /><use id="more-mobile-usage" xlink:href="#more-mobile" class="sprite-symbol-usage" /><use id="news-mobile-usage" xlink:href="#news-mobile" class="sprite-symbol-usage" /><use id="search-usage" xlink:href="#search" class="sprite-symbol-usage" /><use id="telegram-usage" xlink:href="#telegram" class="sprite-symbol-usage" /><use id="twitter-usage" xlink:href="#twitter" class="sprite-symbol-usage" /><use id="vk-usage" xlink:href="#vk" class="sprite-symbol-usage" /></svg>
+</symbol><symbol viewBox="0 0 20 20" id="vk"><defs><style>#vk .cls-1{fill:#5963aa;}</style></defs><g id="vk_Layer_2" data-name="Layer 2"><g id="vk_Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M17.14288,0H2.85712A2.85711,2.85711,0,0,0,0,2.85712V17.14288A2.85711,2.85711,0,0,0,2.85712,20H17.14288A2.85711,2.85711,0,0,0,20,17.14288V2.85712A2.85711,2.85711,0,0,0,17.14288,0Zm.53443,15.00031H15.848c-.69671,0-.90216-.56092-2.14014-1.80909-1.08251-1.05621-1.5487-1.19262-1.81933-1.19262-.36585,0-.47614.10614-.47614.63171v1.65247c0,.45477-.14038.71753-1.30316.71753A7.10244,7.10244,0,0,1,4.53583,11.6297C2.27045,8.431,1.64893,6.01031,1.64893,5.5202c0-.27295.10528-.52051.62652-.52051H4.1048c.46612,0,.64148.20716.817.71753.8971,2.62775,2.4007,4.922,3.02222,4.922.23547,0,.34076-.10608.34076-.70245V7.22308C8.21454,5.975,7.558,5.87384,7.558,5.42914a.443.443,0,0,1,.46613-.42444h2.87183c.38592,0,.51623.20715.51623.67712V9.33038c0,.389.17542.52558.29071.52558.23047,0,.426-.13642.852-.566a15.4107,15.4107,0,0,0,2.2453-3.76978.7945.7945,0,0,1,.797-.52051h1.82928c.55133,0,.66663.28809.55133.67713H17.968c-.23554,1.07129-2.46088,4.23474-2.46088,4.23474-.19543.31323-.27057.4649,0,.8186.1955.27283.832.82367,1.25806,1.329a7.92055,7.92055,0,0,1,1.5437,2.15784C18.45917,14.73755,18.19855,15.00031,17.67731,15.00031Z" /></g></g></symbol></defs><use id="360-usage" xlink:href="#360" class="sprite-symbol-usage" /><use id="achievement-usage" xlink:href="#achievement" class="sprite-symbol-usage" /><use id="arrow-hide-usage" xlink:href="#arrow-hide" class="sprite-symbol-usage" /><use id="arrow-slider-usage" xlink:href="#arrow-slider" class="sprite-symbol-usage" /><use id="arrows-usage" xlink:href="#arrows" class="sprite-symbol-usage" /><use id="articles-mobile-usage" xlink:href="#articles-mobile" class="sprite-symbol-usage" /><use id="bonnie-bubbles-usage" xlink:href="#bonnie-bubbles" class="sprite-symbol-usage" /><use id="business-usage" xlink:href="#business" class="sprite-symbol-usage" /><use id="close-usage" xlink:href="#close" class="sprite-symbol-usage" /><use id="contributing-usage" xlink:href="#contributing" class="sprite-symbol-usage" /><use id="developer-usage" xlink:href="#developer" class="sprite-symbol-usage" /><use id="exchange-usage" xlink:href="#exchange" class="sprite-symbol-usage" /><use id="eye-usage" xlink:href="#eye" class="sprite-symbol-usage" /><use id="facebook-usage" xlink:href="#facebook" class="sprite-symbol-usage" /><use id="instagram-usage" xlink:href="#instagram" class="sprite-symbol-usage" /><use id="logo-usage" xlink:href="#logo" class="sprite-symbol-usage" /><use id="mining-usage" xlink:href="#mining" class="sprite-symbol-usage" /><use id="mining-mobile-usage" xlink:href="#mining-mobile" class="sprite-symbol-usage" /><use id="more-mobile-usage" xlink:href="#more-mobile" class="sprite-symbol-usage" /><use id="news-mobile-usage" xlink:href="#news-mobile" class="sprite-symbol-usage" /><use id="search-usage" xlink:href="#search" class="sprite-symbol-usage" /><use id="telegram-usage" xlink:href="#telegram" class="sprite-symbol-usage" /><use id="twitter-usage" xlink:href="#twitter" class="sprite-symbol-usage" /><use id="vk-usage" xlink:href="#vk" class="sprite-symbol-usage" /></svg>

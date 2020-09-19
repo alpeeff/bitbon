@@ -115,7 +115,7 @@
     }
   }
   &__title {
-    @include font(false, 26, false, 700);
+    @include font(false, 20, false, 700);
     line-height: 1.2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -124,6 +124,9 @@
     text-overflow: ellipsis;
     overflow: hidden;
     margin-bottom: 23px;
+    @include min-w($widthMobileLarge) {
+      font-size: 26px;
+    }
     @include min-w($widthDesktopSmall) {
       font-size: 35px;
       margin: 20px 0;

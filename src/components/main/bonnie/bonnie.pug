@@ -1,0 +1,72 @@
+.bonnie
+  .bonnie__wrapper
+    ul.bonnie__list
+      li.bonnie__list-item
+        .bonnie__list-icon
+          +svg('mining', 25, 25)
+        .bonnie__list-text
+          .bonnie__list-title Доходный майнинг
+          .bonnie__list-subtitle "Депозит" от 10% до 50% в валют
+      li.bonnie__list-item
+        .bonnie__list-icon
+          +svg('contributing', 25, 25)
+        .bonnie__list-text
+          .bonnie__list-title Контрибьютинг
+          .bonnie__list-subtitle Инвестирование в бизнес-проекты
+      li.bonnie__list-item
+        .bonnie__list-icon
+          +svg('exchange', 25, 25)
+        .bonnie__list-text
+          .bonnie__list-title Обмен активами
+          .bonnie__list-subtitle В разработке
+      li.bonnie__list-item
+        .bonnie__list-icon
+          +svg('business', 25, 25)
+        .bonnie__list-text
+          .bonnie__list-title Бизнес решения
+          .bonnie__list-subtitle В разработке
+    .bonnie__figure
+      #bonnie
+      .bonnie__steps
+        .bonnie__bubbles
+          +svg('bonnie-bubbles', 29, 64)
+        .bonnie__step(data-bonnie-step="1")
+          .bonnie__step-title Привет, уважаемый гость)
+          .bonnie__step-text Я решил немного отдохнуть, но не проходи мимо, обязательно разбуди меня, и я поделюсь очень полезной для тебя информацией.
+          button.bonnie__step-btn(data-bonnie-step="2") Разбуди меня
+    .crowdsale
+      .crowdsale__wrapper
+        .crowdsale__interval
+          p С 13.03.2017 по 10.10.2018
+          p в 3 этапа проходил Crowdsale :
+          p ICO / продажа токенов / сбор инвестиций
+        .crowdsale__amount
+          span Crowdsale: 
+          p $88 464 449
+        .crowdsale__info
+          p Данные средства компания разработчик Simcord использует для реализации проекта Bitbon System.
+      .btn.btn--primary
+        span Купить Bitbon
+      .crowdsale__slogan
+        p На данный момент приобрести Bitbon можно на бирже цифровых активов Bit Trade.
+        p Покупку можно осуществить следующими способами:
+      .swipeable
+        .swipeable__list
+          ul.bonnie__list.bonnie__list--footer
+            li.bonnie__list-item
+              .bonnie__list-icon
+                +svg('mining', 25, 25)
+              .bonnie__list-text
+                .bonnie__list-subtitle С помощью платежного поручения (Invoice) Вы можете пополнить Основной баланс, используя услуги любого банка.
+            li.bonnie__list-item
+              .bonnie__list-icon
+                +svg('contributing', 25, 25)
+              .bonnie__list-text
+                .bonnie__list-inline Рекомендуемый способ пополнения баланса личного кабинета Bit Trade. 
+                .bonnie__list-subtitle Возможность пополнения 30 способами: банки, крипта, и т.д.
+            li.bonnie__list-item
+              .bonnie__list-icon
+                +svg('exchange', 25, 25)
+              .bonnie__list-text
+                .bonnie__list-subtitle Лидер среди обменок, позволяющий приобрести adv$ по самому выгодному курсу 
+                .bonnie__list-inline для пополнения счёта advcash без %.

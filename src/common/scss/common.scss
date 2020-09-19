@@ -84,6 +84,29 @@ svg:not(:root) {
   margin-top: 45px;
 }
 
+.swipeable {
+  position: relative;
+  margin-bottom: 15px;
+  overflow-x: scroll;
+  left: -25px;
+  width: 100vw;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &__list {
+    @include flex(flex-start, center, row, nowrap);
+    padding: 35px 0;
+    @include min-w($widthTabletLarge) {
+      justify-content: center;
+    }
+  }
+  @include min-w($widthTabletLarge) {
+    width: 100%;
+    left: auto;
+    overflow-x: initial;
+  }
+}
+
 // Кнопки
 $borderRadius: 20px;
 .btn {
@@ -109,6 +132,7 @@ $borderRadius: 20px;
     background-image: linear-gradient(90deg, #565dd6 0, #8147c1);
     max-width: 270px;
     padding: 25px 70px;
+    margin: 0 auto;
     &:hover {
       &::before {
         opacity: 1;
