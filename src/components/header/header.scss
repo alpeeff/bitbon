@@ -114,15 +114,6 @@
   &__item {
     display: none;
     @include font('Nova', 17, var(--color-black), 400);
-    &.active {
-      &::before {
-        width: 100%;
-        background-color: var(--active-icon-bright);
-      }
-      .nav__link {
-        color: var(--active-icon-bright);
-      }
-    }
     @include min-w($widthDesktopSmall) {
       display: block;
       position: relative;
@@ -160,6 +151,15 @@
           width: 50%;
         }
       }
+      &.active {
+        &::before {
+          width: 100%;
+          background-color: var(--active-icon-bright);
+        }
+        .nav__link {
+          color: var(--active-icon-bright);
+        }
+      }
     }
     &--search {
       display: block;
@@ -185,7 +185,7 @@
   position: absolute;
   top: 20px;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
   &.fixed {
     position: fixed;
     top: 0;

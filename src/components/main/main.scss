@@ -1,13 +1,12 @@
 @import './bonnie/bonnie.scss';
 .main {
-  padding-bottom: 50px;
   background-color: #ffffff;
   &__container {
     padding: 0 25px;
   }
   &__section {
     position: relative;
-    z-index: 1;
+    z-index: 10;
     &-image {
       position: absolute;
       width: 100%;
@@ -28,6 +27,37 @@
       #f2eeff
     );
     border-radius: 0 0 33px 33px;
+    &.main__section--dark {
+      padding-top: 40px;
+      padding-bottom: 85px;
+      background-image: none;
+      background-color: #323036;
+      border-radius: 0;
+      z-index: 5;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 60px;
+        bottom: 100%;
+        background-color: #323036;
+        z-index: -10;
+      }
+      & .main__title {
+        margin-bottom: 25px;
+        p {
+          color: #bfbdc3;
+        }
+        h2 {
+          color: #e5e3e8;
+        }
+        h3 {
+          color: #918f94;
+        }
+      }
+    }
   }
   &__recommend {
     padding-top: 120px;
@@ -44,7 +74,7 @@
     position: relative;
     @include font('Roboto');
     p {
-      @include font(false, 29, #53595e);
+      @include font(false, 29, #53595e, 500);
       line-height: 1.22;
       margin-bottom: 3px;
     }
@@ -105,6 +135,18 @@
       svg {
         stroke: #009920;
       }
+    }
+  }
+  &__link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    @include font(false, 18, #a09fa2);
+    @include center();
+    svg {
+      fill: none;
+      stroke: #a09fa2;
+      margin-left: 5px;
     }
   }
 }

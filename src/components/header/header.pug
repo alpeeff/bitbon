@@ -9,16 +9,16 @@ header.header
       nav.nav
         ul.nav__list
           li.nav__item.active
-            a(href="/news.html").nav__link Новости
+            a(href="/news.html" tabindex="1").nav__link Новости
           li.nav__item 
-            a(href="/articles.html").nav__link Статьи
+            a(href="/articles.html" tabindex="2").nav__link Статьи
           li.nav__item 
-            a(href="/about.html").nav__link Суть проекта
+            a(href="/about.html" tabindex="3").nav__link Суть проекта
           li.nav__item 
-            a(href="/mining.html").nav__link Майнинг
+            a(href="/mining.html" tabindex="4").nav__link Майнинг
           li.nav__item 
-            a(href="/termins.html").nav__link Термины
+            a(href="/termins.html" tabindex="5").nav__link Термины
           li.nav__item.nav__item--search
-            a(href="/search.html")
+            a(href="/search.html" tabindex="6")
               +svg('search', 16, 16)
       include ../mobile-menu/mobile-menu.pug

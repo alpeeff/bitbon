@@ -15,6 +15,13 @@
     &:not(:last-child) {
       margin-bottom: 40px;
     }
+    &.card__wrapper--news {
+      flex: 0 0 290px;
+      padding: 0 12.5px;
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
     @include min-w($widthTabletSmall) {
       flex: 0 0 50%;
       padding: 0 20px;
@@ -22,6 +29,17 @@
     @include min-w($widthTabletLarge) {
       flex: none;
       padding: 0;
+    }
+  }
+  &__heading {
+    @include flex(flex-start, center);
+    span {
+      line-height: 1;
+    }
+    svg {
+      fill: none;
+      stroke: #9e9e9f;
+      margin-right: 9px;
     }
   }
   &__item {
@@ -32,6 +50,26 @@
     border-radius: 20px;
     text-decoration: none;
     transition: transform 0.14s ease;
+    &.card__item--news {
+      flex: 0 0 290px;
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+      &::before {
+        box-shadow: 0 3px 30px #000;
+      }
+      .card__title {
+        font-size: 18px;
+      }
+      .card__img {
+        height: 185px;
+        border-radius: 23px 23px 0 0;
+      }
+      .card__body {
+        padding: 20px 17px 17px;
+        border-radius: 0 0 23px 23px;
+      }
+    }
     @include min-w($widthDesktopSmall) {
       height: 305px;
       &:hover {
@@ -138,10 +176,6 @@
   &__bottom {
     @include flex(flex-start, center);
     @include font('Roboto', 14, #9e9e9f);
-    & > * {
-      display: block;
-      margin-right: 15px;
-    }
     @include min-w($widthTabletLarge) {
       order: -1;
     }
