@@ -72,7 +72,10 @@ export default () => {
         );
         if (step) {
           reinitBonnie(step, toStep);
-          overlay.classList.remove('active');
+          const timeout = window.setTimeout(() => {
+            overlay.classList.remove('active');
+            window.clearTimeout(timeout);
+          }, 900);
         }
       }
     });

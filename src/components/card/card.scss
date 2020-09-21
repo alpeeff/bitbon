@@ -1,4 +1,59 @@
 .card {
+  a {
+    text-decoration: none;
+  }
+  &__list {
+    @include min-w($widthTabletSmall) {
+      @include flex(center);
+      overflow: hidden;
+      margin: 0 -20px;
+    }
+    @include min-w($widthTabletLarge) {
+      flex-direction: column;
+      margin: 0;
+      overflow: initial;
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    display: block;
+    width: 88%;
+    height: 95%;
+    border-radius: 20px;
+    box-shadow: 0 0 54px 0 rgba(68, 65, 78, 0.45);
+    background-color: transparent;
+    z-index: 0;
+  }
+  &__views {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    padding: 6px 10px;
+    @include center();
+    @include font(false, 11, #fff);
+    span {
+      line-height: 1;
+    }
+    svg {
+      margin-right: 5px;
+      fill: none;
+      stroke: #fff;
+    }
+  }
+  &__img {
+    position: relative;
+    height: 250px;
+    img {
+      border-radius: 20px 20px 0 0;
+      background-color: #fff;
+    }
+  }
   &__body {
     border-radius: 0 0 20px 20px;
     background-color: #fdfaff;
@@ -25,16 +80,44 @@
       }
     }
   }
-  &__list {
-    @include min-w($widthTabletSmall) {
-      @include flex(center);
-      overflow: hidden;
-      margin: 0 -20px;
-    }
+  &__title {
+    @include font(false, 20, false, 700);
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 23px;
+  }
+  &__bottom {
+    @include flex(flex-start, center);
+    @include font('Roboto', 14, #9e9e9f);
     @include min-w($widthTabletLarge) {
-      flex-direction: column;
-      margin: 0;
-      overflow: initial;
+      order: -1;
+    }
+  }
+  &__author {
+    @include flex(flex-start, center);
+    &-img {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 9px;
+      @include center();
+      img {
+        max-width: 20px;
+        max-height: 20px;
+      }
+      @include min-w($widthTabletSmall) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &-name {
+      line-height: 1;
     }
   }
   &__wrapper {
@@ -66,167 +149,6 @@
       fill: none;
       stroke: #9e9e9f;
       margin-right: 9px;
-    }
-  }
-  &--article {
-    @include font('Nova', false, inherit);
-    display: block;
-    background-color: #fff;
-    position: relative;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: transform 0.14s ease;
-    @include min-w($widthDesktopSmall) {
-      height: 305px;
-      &:hover {
-        transform: translateY(-6px);
-        &:before {
-          box-shadow: 0 0 40px rgba(68, 65, 78, 0.55);
-        }
-        .card__filters {
-          top: -20px;
-          left: 20px;
-          transform: scale(1);
-        }
-      }
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translate3d(-50%, 0, 0);
-      display: block;
-      width: 88%;
-      height: 95%;
-      border-radius: 20px;
-      box-shadow: 0 0 54px 0 rgba(68, 65, 78, 0.45);
-      background-color: transparent;
-      z-index: 0;
-      @include min-w($widthTabletLarge) {
-        transition: all 0.14s linear;
-        width: 88%;
-        height: 80%;
-        box-shadow: 0 0 54px rgba(68, 65, 78, 0.3);
-        border-radius: 12px;
-      }
-    }
-    @include min-w($widthTabletLarge) {
-      @include flex(flex-start, stretch, row, nowrap);
-      width: 100%;
-    }
-    .card__link {
-      display: none;
-      @include min-w($widthTabletLarge) {
-        display: block;
-        @include font(false, 18px, #5575c5);
-        line-height: 1;
-      }
-    }
-    .card__img {
-      position: relative;
-      height: 250px;
-      @include min-w($widthTabletLarge) {
-        width: 25%;
-        max-width: 400px;
-      }
-      @include min-w($widthDesktopSmall) {
-        width: 35%;
-      }
-      @include min-w($widthDesktopSmall) {
-        height: auto;
-      }
-      img {
-        border-radius: 20px 20px 0 0;
-        background-color: #fff;
-        @include min-w($widthTabletLarge) {
-          border-radius: 20px;
-        }
-      }
-    }
-    .card__body {
-      padding: 23px 25px;
-      @include min-w($widthTabletLarge) {
-        border-radius: 0 20px 20px 0;
-        @include flex(space-between, flex-start, column);
-        width: 75%;
-        padding: 35px 80px 35px 60px;
-      }
-    }
-    .card__title {
-      @include font(false, 20, false, 700);
-      line-height: 1.2;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      text-overflow: ellipsis;
-      -webkit-line-clamp: 3;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      margin-bottom: 23px;
-      @include min-w($widthMobileLarge) {
-        font-size: 26px;
-      }
-      @include min-w($widthDesktopSmall) {
-        font-size: 35px;
-        margin: 20px 0;
-      }
-      @include min-w($widthDesktopLarge) {
-        font-size: 41px;
-      }
-    }
-    .card__bottom {
-      @include flex(flex-start, center);
-      @include font('Roboto', 14, #9e9e9f);
-      @include min-w($widthTabletLarge) {
-        order: -1;
-      }
-    }
-    .card__author {
-      @include flex(flex-start, center);
-      &-img {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin-right: 9px;
-        @include center();
-        img {
-          max-width: 20px;
-          max-height: 20px;
-        }
-        @include min-w($widthTabletSmall) {
-          width: 20px;
-          height: 20px;
-        }
-      }
-      &-name {
-        line-height: 1;
-      }
-    }
-    .card__filters {
-      @include flex();
-      position: absolute;
-      left: 7px;
-      top: 7px;
-      transition: all 0.2s linear;
-      transform: scale(0.9);
-      &-item {
-        position: relative;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        background-color: #fff;
-        box-shadow: 0 8px 7px rgba(56, 56, 56, 0.15);
-        @include center();
-        &:not(:last-child) {
-          margin-right: 7px;
-        }
-        z-index: 10;
-        svg {
-          width: 60%;
-          height: 60%;
-        }
-      }
     }
   }
 }
