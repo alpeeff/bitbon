@@ -45,6 +45,9 @@
         background-color: #323036;
         z-index: -10;
       }
+      @include min-w($widthDesktopSmall) {
+        padding: 85px 0 140px;
+      }
       & .main__title {
         margin-bottom: 25px;
         p {
@@ -147,6 +150,17 @@
       fill: none;
       stroke: #a09fa2;
       margin-left: 5px;
+    }
+    transition: color 0.15s ease;
+    &:hover {
+      color: #bab9bb;
+    }
+  }
+  &__news {
+    &-wrapper {
+      @include min-w($widthDesktopSmall) {
+        margin-bottom: 20px;
+      }
     }
   }
 }

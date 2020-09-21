@@ -1,0 +1,71 @@
+.card {
+  a {
+    text-decoration: none;
+  }
+  &.card--news {
+    @include font('Nova', false, inherit);
+    flex: 0 0 290px;
+    padding: 0 12.5px;
+    position: relative;
+    @include min-w($widthDesktopSmall) {
+      flex: 0 0 25%;
+    }
+    @include min-w($widthDesktopSmall) {
+      transition: transform 0.15s ease-in-out;
+      &:hover {
+        transform: translateY(-6px);
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate3d(-50%, 0, 0);
+      display: block;
+      width: 88%;
+      height: 95%;
+      border-radius: 20px;
+      box-shadow: 0 3px 30px #000;
+      background-color: transparent;
+      z-index: 0;
+    }
+    .card__img {
+      position: relative;
+      height: 185px;
+      img {
+        border-radius: 23px 23px 0 0;
+        background-color: #fff;
+      }
+    }
+    .card__body {
+      padding: 20px 17px 17px;
+      border-radius: 0 0 23px 23px;
+      background-color: #fdfaff;
+      position: relative;
+      z-index: 5;
+    }
+    .card__title {
+      @include font(false, 18, #2f2f2f, 700);
+      line-height: 1.2;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      margin-bottom: 23px;
+      text-decoration: none;
+      transition: color 0.33s ease;
+      &:hover {
+        color: #6163b9;
+      }
+    }
+    .card__body {
+      .card__bottom {
+        @include flex(flex-start, center);
+        @include font('Roboto', 14, #9e9e9f);
+      }
+    }
+  }
+}

@@ -1,4 +1,30 @@
 .card {
+  &__body {
+    border-radius: 0 0 20px 20px;
+    background-color: #fdfaff;
+    position: relative;
+    z-index: 5;
+  }
+  &__link {
+    display: none;
+    text-align: center;
+    text-decoration: none;
+    @include font(false, 18, #5575c5);
+    @include center();
+    line-height: 1;
+    svg {
+      fill: none;
+      stroke: #5575c5;
+      margin-left: 5px;
+    }
+    @include min-w($widthTabletLarge) {
+      display: block;
+      transition: color 0.15s ease;
+      &:hover {
+        color: #7b94d2;
+      }
+    }
+  }
   &__list {
     @include min-w($widthTabletSmall) {
       @include flex(center);
@@ -42,7 +68,7 @@
       margin-right: 9px;
     }
   }
-  &__item {
+  &--article {
     @include font('Nova', false, inherit);
     display: block;
     background-color: #fff;
@@ -50,26 +76,6 @@
     border-radius: 20px;
     text-decoration: none;
     transition: transform 0.14s ease;
-    &.card__item--news {
-      flex: 0 0 290px;
-      &:not(:last-child) {
-        margin-right: 25px;
-      }
-      &::before {
-        box-shadow: 0 3px 30px #000;
-      }
-      .card__title {
-        font-size: 18px;
-      }
-      .card__img {
-        height: 185px;
-        border-radius: 23px 23px 0 0;
-      }
-      .card__body {
-        padding: 20px 17px 17px;
-        border-radius: 0 0 23px 23px;
-      }
-    }
     @include min-w($widthDesktopSmall) {
       height: 305px;
       &:hover {
@@ -109,121 +115,117 @@
       @include flex(flex-start, stretch, row, nowrap);
       width: 100%;
     }
-  }
-  &__link {
-    display: none;
-    @include min-w($widthTabletLarge) {
-      display: block;
-      @include font(false, 18px, #5575c5);
-      line-height: 1;
-    }
-  }
-  &__img {
-    position: relative;
-    height: 250px;
-    @include min-w($widthTabletLarge) {
-      width: 25%;
-      max-width: 400px;
-    }
-    @include min-w($widthDesktopSmall) {
-      width: 35%;
-    }
-    @include min-w($widthDesktopSmall) {
-      height: auto;
-    }
-    img {
-      border-radius: 20px 20px 0 0;
-      background-color: #fff;
+    .card__link {
+      display: none;
       @include min-w($widthTabletLarge) {
-        border-radius: 20px;
+        display: block;
+        @include font(false, 18px, #5575c5);
+        line-height: 1;
       }
     }
-  }
-  &__body {
-    padding: 23px 25px;
-    border-radius: 0 0 20px 20px;
-    background-color: #fdfaff;
-    position: relative;
-    z-index: 5;
-    @include min-w($widthTabletLarge) {
-      border-radius: 0 20px 20px 0;
-      @include flex(space-between, flex-start, column);
-      width: 75%;
-      padding: 35px 80px 35px 60px;
-    }
-  }
-  &__title {
-    @include font(false, 20, false, 700);
-    line-height: 1.2;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    margin-bottom: 23px;
-    @include min-w($widthMobileLarge) {
-      font-size: 26px;
-    }
-    @include min-w($widthDesktopSmall) {
-      font-size: 35px;
-      margin: 20px 0;
-    }
-    @include min-w($widthDesktopLarge) {
-      font-size: 41px;
-    }
-  }
-  &__bottom {
-    @include flex(flex-start, center);
-    @include font('Roboto', 14, #9e9e9f);
-    @include min-w($widthTabletLarge) {
-      order: -1;
-    }
-  }
-  &__author {
-    @include flex(flex-start, center);
-    &-img {
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin-right: 9px;
-      @include center();
-      img {
-        max-width: 20px;
-        max-height: 20px;
-      }
-      @include min-w($widthTabletSmall) {
-        width: 20px;
-        height: 20px;
-      }
-    }
-    &-name {
-      line-height: 1;
-    }
-  }
-  &__filters {
-    @include flex();
-    position: absolute;
-    left: 7px;
-    top: 7px;
-    transition: all 0.2s linear;
-    transform: scale(0.9);
-    &-item {
+    .card__img {
       position: relative;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background-color: #fff;
-      box-shadow: 0 8px 7px rgba(56, 56, 56, 0.15);
-      @include center();
-      &:not(:last-child) {
-        margin-right: 7px;
+      height: 250px;
+      @include min-w($widthTabletLarge) {
+        width: 25%;
+        max-width: 400px;
       }
-      z-index: 10;
-      svg {
-        width: 60%;
-        height: 60%;
+      @include min-w($widthDesktopSmall) {
+        width: 35%;
+      }
+      @include min-w($widthDesktopSmall) {
+        height: auto;
+      }
+      img {
+        border-radius: 20px 20px 0 0;
+        background-color: #fff;
+        @include min-w($widthTabletLarge) {
+          border-radius: 20px;
+        }
+      }
+    }
+    .card__body {
+      padding: 23px 25px;
+      @include min-w($widthTabletLarge) {
+        border-radius: 0 20px 20px 0;
+        @include flex(space-between, flex-start, column);
+        width: 75%;
+        padding: 35px 80px 35px 60px;
+      }
+    }
+    .card__title {
+      @include font(false, 20, false, 700);
+      line-height: 1.2;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      margin-bottom: 23px;
+      @include min-w($widthMobileLarge) {
+        font-size: 26px;
+      }
+      @include min-w($widthDesktopSmall) {
+        font-size: 35px;
+        margin: 20px 0;
+      }
+      @include min-w($widthDesktopLarge) {
+        font-size: 41px;
+      }
+    }
+    .card__bottom {
+      @include flex(flex-start, center);
+      @include font('Roboto', 14, #9e9e9f);
+      @include min-w($widthTabletLarge) {
+        order: -1;
+      }
+    }
+    .card__author {
+      @include flex(flex-start, center);
+      &-img {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 9px;
+        @include center();
+        img {
+          max-width: 20px;
+          max-height: 20px;
+        }
+        @include min-w($widthTabletSmall) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      &-name {
+        line-height: 1;
+      }
+    }
+    .card__filters {
+      @include flex();
+      position: absolute;
+      left: 7px;
+      top: 7px;
+      transition: all 0.2s linear;
+      transform: scale(0.9);
+      &-item {
+        position: relative;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0 8px 7px rgba(56, 56, 56, 0.15);
+        @include center();
+        &:not(:last-child) {
+          margin-right: 7px;
+        }
+        z-index: 10;
+        svg {
+          width: 60%;
+          height: 60%;
+        }
       }
     }
   }

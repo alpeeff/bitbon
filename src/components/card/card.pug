@@ -1,6 +1,6 @@
 .card__list
   .card__wrapper
-    a(href="/").card__item
+    a(href="/").card.card--article
       .card__img
         +image('card_01.jpg')
         .card__filters
@@ -20,7 +20,7 @@
               img(src="https://bitbon.today/media/avatar/Maria.jpg" alt="")
             .card__author-name Maria
   .card__wrapper
-    a(href="/").card__item
+    a(href="/").card.card--article
       .card__img
         +image('card_01.jpg')
         .card__filters
@@ -33,6 +33,7 @@
       .card__body
         .card__title Как стать инвестором, найти проект и финансировать его
         .card__link Подробнее
+          +svg('arrow-right', 14, 7)
         .card__bottom
           .card__author
             .card__author-img
