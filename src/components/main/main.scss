@@ -1,4 +1,5 @@
 @import './bonnie/bonnie.scss';
+@import './opportunity/opport.scss';
 .main {
   background-color: #ffffff;
   &__container {
@@ -6,6 +7,7 @@
   }
   &__section {
     position: relative;
+    padding-bottom: 60px;
     z-index: 10;
     &-image {
       position: absolute;
@@ -27,8 +29,12 @@
       #f2eeff
     );
     border-radius: 0 0 33px 33px;
+    &.main__section--reverse {
+      border-radius: 33px 33px 0 0;
+      padding-top: 80px;
+    }
     &.main__section--dark {
-      padding-top: 40px;
+      padding-top: 75px;
       padding-bottom: 85px;
       background-image: none;
       background-color: #323036;
@@ -45,11 +51,22 @@
         background-color: #323036;
         z-index: -10;
       }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 60px;
+        top: 100%;
+        background-color: #323036;
+        z-index: -10;
+      }
       @include min-w($widthDesktopSmall) {
         padding: 85px 0 140px;
       }
       & .main__title {
-        margin-bottom: 25px;
+        margin-bottom: 15px;
         p {
           color: #bfbdc3;
         }
@@ -80,6 +97,7 @@
       @include font(false, 29, #53595e, 500);
       line-height: 1.22;
       margin-bottom: 3px;
+      margin-top: 0;
     }
     h2 {
       @include font(false, 35, #303336, 700);
@@ -158,8 +176,8 @@
   }
   &__news {
     &-wrapper {
-      @include min-w($widthDesktopSmall) {
-        margin-bottom: 20px;
+      .swipeable {
+        padding: 40px 0;
       }
     }
   }

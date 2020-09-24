@@ -86,16 +86,16 @@ svg:not(:root) {
 
 .swipeable {
   position: relative;
-  margin-bottom: 15px;
-  overflow-x: scroll;
-  left: -25px;
+  overflow-x: auto;
+  margin-left: -25px;
   width: 100vw;
+  @include flex(space-between, center);
   &::-webkit-scrollbar {
     display: none;
   }
   &__list {
-    @include flex(flex-start, center, row, nowrap);
-    padding: 35px 0;
+    @include flex(space-between, center, row, nowrap);
+    width: auto;
     @include min-w($widthTabletLarge) {
       justify-content: center;
       &.start {
@@ -105,8 +105,9 @@ svg:not(:root) {
   }
   @include min-w($widthTabletLarge) {
     width: 100%;
-    left: auto;
     overflow-x: initial;
+    margin-left: 0;
+    justify-content: center;
   }
 }
 

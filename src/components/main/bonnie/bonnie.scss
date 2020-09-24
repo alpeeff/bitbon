@@ -1,3 +1,8 @@
+.bonnie__recommend {
+  .swipeable {
+    padding: 40px 0;
+  }
+}
 .bonnie {
   @include font('Nova');
   &__wrapper {
@@ -8,6 +13,7 @@
   &__figure {
     margin-bottom: 65px;
     position: relative;
+    overflow: hidden;
     z-index: 15;
     @include min-w($widthDesktopSmall) {
       flex: 0 0 50%;
@@ -71,6 +77,7 @@
       .bonnie__list-item {
         flex: 1 0 370px;
         background-color: transparent;
+        margin-bottom: 0;
         &:not(:last-child) {
           margin-right: 20px;
         }
@@ -263,6 +270,7 @@
       }
     }
     &__slogan {
+      margin-bottom: 35px;
       p {
         @include font(false, 12, #7c767f);
         text-align: center;
