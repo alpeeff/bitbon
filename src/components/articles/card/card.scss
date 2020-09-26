@@ -21,6 +21,13 @@
         }
       }
     }
+    &.ex {
+      .card__title {
+        @include font('Roboto', 18, false, 700);
+        line-height: 1.3em;
+        margin-bottom: 20px;
+      }
+    }
     &::before {
       @include min-w($widthTabletLarge) {
         transition: all 0.14s linear;
@@ -109,7 +116,13 @@
           width: 60%;
           height: 60%;
         }
+        img {
+          background-color: transparent;
+        }
       }
+    }
+    .card__bottom {
+      justify-content: space-between;
     }
   }
 }

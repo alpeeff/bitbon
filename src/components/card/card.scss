@@ -2,6 +2,7 @@
   a {
     text-decoration: none;
   }
+
   &__list {
     @include min-w($widthTabletSmall) {
       @include flex(center);
@@ -90,6 +91,17 @@
     text-overflow: ellipsis;
     overflow: hidden;
     margin-bottom: 23px;
+  }
+  &__undertitle {
+    @include font('Roboto', 16, #666);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 27px;
+    line-height: 1.38;
   }
   &__bottom {
     @include flex(flex-start, center);

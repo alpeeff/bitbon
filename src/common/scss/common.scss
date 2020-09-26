@@ -27,6 +27,22 @@ body {
   &.block-scroll {
     overflow: hidden;
   }
+  &.body--white {
+    .logo__top {
+      color: #fff;
+    }
+    .logo__bottom {
+      color: #fff;
+    }
+    .nav__link {
+      color: #fff;
+    }
+    .nav__item--search {
+      svg {
+        stroke: #fff;
+      }
+    }
+  }
 }
 
 .wrapper {
