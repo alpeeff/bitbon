@@ -42,6 +42,17 @@ body {
         stroke: #fff;
       }
     }
+    .nav__item {
+      &::after {
+        background-color: #fff;
+      }
+      &::before {
+        background-color: #fff;
+      }
+      .nav__link {
+        color: #fff;
+      }
+    }
   }
 }
 
