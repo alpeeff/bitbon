@@ -4,7 +4,7 @@ import lazy from 'vanilla-lazyload';
 export default () => {
   const target = document.querySelector('.articles__container');
   let instanceLazy = new lazy({
-    threshold: 100,
+    threshold: 0,
   });
   if (!target) return;
   const state = {

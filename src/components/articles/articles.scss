@@ -40,7 +40,7 @@
   }
   &__header {
     padding-top: 150px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     text-align: center;
     &-container {
       width: 76%;
@@ -48,6 +48,7 @@
     }
     @include min-w($widthTabletLarge) {
       padding-top: 230px;
+      padding-bottom: 220px;
     }
   }
   &__section {
