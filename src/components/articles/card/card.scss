@@ -22,10 +22,51 @@
       }
     }
     &.ex {
+      @include min-w($widthTabletLarge) {
+        height: 330px;
+      }
       .card__title {
         @include font('Roboto', 18, false, 700);
         line-height: 1.3em;
         margin-bottom: 20px;
+        @include min-w($widthTabletLarge) {
+          font-size: 25px;
+          order: -1;
+          margin-top: 0;
+        }
+      }
+      .card__bottom {
+        @include min-w($widthTabletLarge) {
+          margin-bottom: 33px;
+        }
+      }
+      .card__undertitle {
+        @include min-w($widthTabletLarge) {
+          margin-bottom: 0;
+          line-height: 1.75;
+        }
+      }
+      .card__author {
+        @include min-w($widthTabletLarge) {
+          margin-right: 36px;
+        }
+      }
+      .card__heading {
+        svg {
+          @include min-w($widthTabletLarge) {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+      .card__body {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+      }
+      .card__img {
+        @include min-w($widthTabletLarge) {
+          width: 40%;
+        }
       }
     }
     &::before {

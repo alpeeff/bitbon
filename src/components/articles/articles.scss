@@ -3,13 +3,17 @@
 .articles {
   @include font('Nova');
   position: relative;
+  .card__list {
+    max-width: 1050px;
+    margin: 0 auto;
+  }
   &__poster {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     z-index: -1;
-    max-height: 100vh;
+    height: 100vh;
   }
   &__title {
     @include font(false, 22, #fff, 700);
@@ -18,11 +22,21 @@
     @include min-w($widthMobileLarge) {
       font-size: 30px;
     }
+    @include min-w($widthTabletLarge) {
+      font-size: 40px;
+      max-width: 860px;
+      margin: 0 auto 25px;
+    }
   }
   &__undertitle {
     @include font('Roboto', 12, rgba(255, 255, 255, 0.651), 300);
     line-height: 1.4;
     margin: 0;
+    @include min-w($widthTabletLarge) {
+      font-size: 15px;
+      max-width: 650px;
+      margin: 0 auto;
+    }
   }
   &__header {
     padding-top: 150px;
@@ -31,6 +45,9 @@
     &-container {
       width: 76%;
       margin: 0 auto;
+    }
+    @include min-w($widthTabletLarge) {
+      padding-top: 230px;
     }
   }
   &__section {
@@ -66,6 +83,10 @@
     border-radius: 10px;
   }
   .filter {
+    margin-bottom: 25px;
+    @include min-w($widthTabletLarge) {
+      margin-bottom: 52px;
+    }
     &__title {
       @include font(false, 16px, #7c7c7c, 600);
       margin-bottom: 25px;
@@ -75,7 +96,6 @@
       width: 100vw;
       margin-left: -25px;
       overflow-x: auto;
-      margin-bottom: 25px;
       @include flex(flex-start, center);
       &::-webkit-scrollbar {
         display: none;

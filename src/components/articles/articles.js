@@ -1,7 +1,9 @@
 import axios from '../../api/axios';
+import lazy from 'vanilla-lazyload';
 
 export default () => {
   const target = document.querySelector('.articles__container');
+
   if (!target) return;
   const state = {
     slug: 'staty',
@@ -128,6 +130,7 @@ export default () => {
             </div>
           </a>
         `;
+
         container.append(card);
       });
     },
