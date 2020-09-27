@@ -3,7 +3,9 @@ import lazy from 'vanilla-lazyload';
 
 export default () => {
   const target = document.querySelector('.articles__container');
-
+  let instanceLazy = new lazy({
+    threshold: 100,
+  });
   if (!target) return;
   const state = {
     slug: 'staty',
@@ -97,7 +99,9 @@ export default () => {
             item.link
           }" class="card card--article ex">
             <div class="card__img">
-              <img src="https://bitbon.today${item.image}" alt="alt">
+              <img class="lazy" data-src="https://bitbon.today${
+                item.image
+              }" alt="alt">
               <div class="card__filters">
                 ${item.filters.map((filter) => {
                   return `
@@ -130,7 +134,9 @@ export default () => {
             </div>
           </a>
         `;
-
+        window.setTimeout(() => {
+          instanceLazy.update();
+        });
         container.append(card);
       });
     },
