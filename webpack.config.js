@@ -50,6 +50,10 @@ module.exports = {
       template: './pages/articles.pug',
       filename: 'articles.html',
     }),
+    new HTMLWebpackPlugin({
+      template: './pages/news.pug',
+      filename: 'news.html',
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: './css/index.css',

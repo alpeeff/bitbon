@@ -1,10 +1,22 @@
 .card {
+  &__list {
+    &.card__list--news {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 900px !important;
+    }
+  }
   &.card--news {
     @include font('Nova', false, inherit);
     flex: 0 0 290px;
     padding: 0 12.5px;
     position: relative;
+    margin-bottom: 30px;
+
     @include min-w($widthDesktopSmall) {
+      &.ex {
+        flex: 0 0 50%;
+      }
       flex: 0 0 25%;
     }
     @include min-w($widthDesktopSmall) {
@@ -15,7 +27,7 @@
     }
     &::before {
       border-radius: 20px;
-      box-shadow: 0 3px 30px #000;
+      box-shadow: 0 1px 23px -10px #000;
     }
     .card__img {
       position: relative;

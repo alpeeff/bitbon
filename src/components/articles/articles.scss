@@ -3,6 +3,14 @@
 .articles {
   @include font('Nova');
   position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 100vh;
+    height: calc(100% - 100vh);
+    background-color: rgb(2, 5, 20);
+  }
   .card__list {
     max-width: 1050px;
     margin: 0 auto;
@@ -64,11 +72,16 @@
       left: 50%;
       top: -8px;
       transform: translateX(-50%);
+      @include min-w($widthTabletLarge) {
+        border-radius: 30px;
+      }
     }
     &::before {
       width: 94.9%;
-      opacity: 0.9;
       z-index: -1;
+      @include min-w($widthTabletLarge) {
+        top: -14px;
+      }
     }
     &::after {
       width: 90.4%;
@@ -76,12 +89,18 @@
       background: #8f9298;
       top: -15px;
       z-index: -2;
+      @include min-w($widthTabletLarge) {
+        top: -26px;
+      }
     }
   }
-  &__container {
+  #articles__container {
     padding: 50px 25px;
     background-color: #fafafa;
     border-radius: 10px;
+    @include min-w($widthTabletLarge) {
+      border-radius: 30px;
+    }
   }
   .filter {
     margin-bottom: 25px;

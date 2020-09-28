@@ -4,9 +4,81 @@ import throttle from '../../common/js/throttle';
 
 const loadingTemplate = `
 <div class="lds-ring"><div></div><div></div><div></div><div></div></div>`;
+const article = ({
+  link,
+  image,
+  filters,
+  viewed,
+  title,
+  mini_text,
+  avatar,
+  author,
+  published_date,
+}) => {
+  return `
+  <a href="https://bitbon.today${link}" class="card card--article ex">
+    <div class="card__img">
+      <img class="lazy" data-src="https://bitbon.today${image}" alt="alt">
+      <div class="card__filters">
+        ${filters.map((filter) => {
+          return `
+            <div class="card__filters-item">
+              <img src="https://bitbon.today${filter.icon}">
+            </div>
+          `;
+        })}
+      </div>
+      <div class="card__views">
+        <svg width="12" height="7"><use xlink:href="./assets/sprite.svg#eye"></use></svg>
+        <span>${viewed}</span>
+      </div>
+    </div>
+    <div class="card__body">
+      <div class="card__title">${title}</div>
+      <div class="card__undertitle">${mini_text}</div>
+      <div class="card__bottom">
+        <div class="card__author">
+          <div class="card__author-img">
+            <img src="https://bitbon.today${avatar}">
+          </div>
+          <div class="card__author-name">${author}</div>
+        </div>
+        <div class="card__heading">
+          <svg width="15" height="15"><use xlink:href="./assets/sprite.svg#time"></use></svg>
+          <span>${published_date}</span>
+        </div>
+      </div>
+    </div>
+  </a>
+`;
+};
+
+const news = ({ link, image, viewed, title, published_date }) => {
+  return `
+  <a href="https://bitbon.today${link}">
+    <div class="card__img">
+      <img class="lazy" data-src="https://bitbon.today${image}" alt="alt">
+      <div class="card__views">
+        <svg width="12" height="7"><use xlink:href="./assets/sprite.svg#eye"></use></svg>
+        <span>${viewed}</span>
+      </div>
+    </div>
+    <div class="card__body">
+      <div class="card__title">${title}</div>
+      <div class="card__bottom">
+        <div class="card__heading">
+          <svg width="15" height="15"><use xlink:href="./assets/sprite.svg#time"></use></svg>
+          <span>${published_date}</span>
+        </div>
+      </div>
+    </div>
+  </a>
+`;
+};
 
 export default () => {
-  const target = document.querySelector('.articles__container');
+  const target = document.querySelector('#articles__container');
+  const page = target ? target.getAttribute('data-page') : null;
   if (!target) return;
   let instanceLazy = new lazy({
     threshold: 0,
@@ -15,7 +87,7 @@ export default () => {
     all: false,
     loaderContainer: document.querySelector('.card__loading'),
     loading: true,
-    slug: 'staty',
+    slug: page || 'staty',
     page: 1,
     filtersTemplate: null,
     router: {},
@@ -70,6 +142,10 @@ export default () => {
     },
     renderFilters() {
       const container = document.querySelector('.filter__list');
+      if (page === 'novosti') {
+        container.remove();
+        return;
+      }
       container.innerHTML = '';
       state.filtersTemplate.forEach((item) => {
         const btn = document.createElement('button');
@@ -131,55 +207,22 @@ export default () => {
     },
     renderArticles() {
       const container = document.querySelector('.card__list');
-      for (let i = 0; i < state.results.length - 1; i++) {
+      for (let i = 0; i < state.results.length; i++) {
         const item = state.results[i];
         const onPage = document.querySelector(
           `.card__wrapper[data-id="${item.id}"]`
         );
         if (!onPage) {
           const card = document.createElement('div');
-          card.classList.add('card__wrapper');
+          if (page === 'novosti') {
+            card.classList.add('card');
+            card.classList.add('card--news');
+            card.classList.add('ex');
+          } else {
+            card.classList.add('card__wrapper');
+          }
           card.setAttribute('data-id', item.id);
-          card.innerHTML = `
-            <a href="https://bitbon.today${
-              item.link
-            }" class="card card--article ex">
-              <div class="card__img">
-                <img class="lazy" data-src="https://bitbon.today${
-                  item.image
-                }" alt="alt">
-                <div class="card__filters">
-                  ${item.filters.map((filter) => {
-                    return `
-                      <div class="card__filters-item">
-                        <img src="https://bitbon.today${filter.icon}">
-                      </div>
-                    `;
-                  })}
-                </div>
-                <div class="card__views">
-                  <svg width="12" height="7"><use xlink:href="./assets/sprite.svg#eye"></use></svg>
-                  <span>${item.viewed}</span>
-                </div>
-              </div>
-              <div class="card__body">
-                <div class="card__title">${item.title}</div>
-                <div class="card__undertitle">${item.mini_text}</div>
-                <div class="card__bottom">
-                  <div class="card__author">
-                    <div class="card__author-img">
-                      <img src="https://bitbon.today${item.avatar}">
-                    </div>
-                    <div class="card__author-name">${item.author}</div>
-                  </div>
-                  <div class="card__heading">
-                    <svg width="15" height="15"><use xlink:href="./assets/sprite.svg#time"></use></svg>
-                    <span>${item.published_date}</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          `;
+          card.innerHTML = page === 'novosti' ? news(item) : article(item);
           container.append(card);
         }
         window.setTimeout(() => {
