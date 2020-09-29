@@ -3,7 +3,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 
 Swiper.use([Navigation, Pagination]);
 
-export default () => {
+export default async () => {
   const clickShowBtn = (event) => {
     const btn = event.target.closest('.btn[data-action="show-section"]');
     if (btn) {

@@ -49,7 +49,7 @@ const reinitBonnie = (step, toStep) => {
   }, 500);
 };
 
-export default () => {
+export default async () => {
   if (!container) return;
   const observer = new IntersectionObserver(callback, options);
   const stepsWrapper = document.querySelector('.bonnie__steps');

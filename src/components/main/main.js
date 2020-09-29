@@ -1,5 +1,5 @@
 import bonnie from './bonnie/bonnie';
 
-export default () => {
+export default async () => {
   bonnie();
 };

@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 import Power1 from 'gsap/EasePack';
 
-export default () => {
+export default async () => {
   const mobileMenu = document.querySelector('.mobile-menu');
   if (!mobileMenu) return;
   const btnMore = document.querySelector('.mobile-menu__item--state');

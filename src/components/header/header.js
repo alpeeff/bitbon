@@ -1,4 +1,4 @@
-export default () => {
+export default async () => {
   const header = document.querySelector('.header');
   const nav = document.querySelector('.nav');
 

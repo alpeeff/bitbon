@@ -76,7 +76,7 @@ const news = ({ link, image, viewed, title, published_date }) => {
 `;
 };
 
-export default () => {
+export default async () => {
   const target = document.querySelector('#articles__container');
   if (!target) return;
   let instanceLazy = new lazy({

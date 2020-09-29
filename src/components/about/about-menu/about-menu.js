@@ -236,7 +236,7 @@ const renderMenu = (menuHtml, menuTemplate, sections) => {
   };
 };
 
-export default () => {
+export default async () => {
   const sections = [...document.querySelectorAll('.about__section')];
 
   const menu = document.querySelector('.about__menu');
