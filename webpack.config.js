@@ -5,13 +5,17 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 
 const optimization = () => {
   const config = {};
   if (!isDev) {
-    config.minimizer = [new TerserWebpackPlugin()];
+    config.minimizer = [
+      new TerserWebpackPlugin(),
+      new OptimizeCssAssetsPlugin(),
+    ];
   }
   return config;
 };
@@ -99,7 +103,25 @@ module.exports = {
       },
       {
         test: /\.(png|jpeg|gif|jpg)$/,
-        use: ['file-loader'],
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 75,
+              },
+              optipng: {
+                enabled: true,
+              },
+              pngquant: {
+                quality: [0.5, 0.5],
+                speed: 4,
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.(eot|woff|woff2|ttf)$/,
