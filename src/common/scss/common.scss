@@ -28,6 +28,13 @@ body {
     overflow: hidden;
   }
   &.body--white {
+    .nav.white .nav__item.active .nav__link {
+      color: #fff;
+    }
+    .nav.white .nav__item.active::before {
+      background-color: #fff;
+      height: 2px;
+    }
     .logo__top {
       color: #fff;
     }

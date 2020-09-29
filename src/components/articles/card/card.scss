@@ -19,6 +19,9 @@
           left: 20px;
           transform: scale(1);
         }
+        .card__title {
+          color: #6163b9;
+        }
       }
     }
     &.ex {
@@ -29,6 +32,7 @@
         @include font('Roboto', 18, false, 700);
         line-height: 1.3em;
         margin-bottom: 20px;
+        transition: color 0.15s ease;
         @include min-w($widthTabletLarge) {
           font-size: 25px;
           order: -1;

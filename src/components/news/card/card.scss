@@ -32,6 +32,9 @@
     .card__img {
       position: relative;
       height: 185px;
+      @include min-w($widthDesktopSmall) {
+        height: 300px;
+      }
       img {
         border-radius: 23px 23px 0 0;
         background-color: #fff;

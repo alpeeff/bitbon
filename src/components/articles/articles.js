@@ -78,11 +78,12 @@ const news = ({ link, image, viewed, title, published_date }) => {
 
 export default () => {
   const target = document.querySelector('#articles__container');
-  const page = target ? target.getAttribute('data-page') : null;
   if (!target) return;
   let instanceLazy = new lazy({
     threshold: 0,
   });
+  const page = target ? target.getAttribute('data-page') : null;
+
   const state = {
     all: false,
     loaderContainer: document.querySelector('.card__loading'),
@@ -134,7 +135,9 @@ export default () => {
     unsetLoding(isAll) {
       if (isAll) {
         state.loading = false;
-        state.loaderContainer.innerHTML = '<p>Вы загрузили все статьи</p>';
+        state.loaderContainer.innerHTML = `<p>Вы загрузили все ${
+          page === 'novosti' ? 'новости' : 'статьи'
+        }</p>`;
       } else {
         state.loading = false;
         state.loaderContainer.innerHTML = '';

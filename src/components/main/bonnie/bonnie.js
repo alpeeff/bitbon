@@ -50,6 +50,7 @@ const reinitBonnie = (step, toStep) => {
 };
 
 export default () => {
+  if (!container) return;
   const observer = new IntersectionObserver(callback, options);
   const stepsWrapper = document.querySelector('.bonnie__steps');
   const overlay = document.querySelector('.bonnie__overlay');
